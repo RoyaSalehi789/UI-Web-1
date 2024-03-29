@@ -48,7 +48,7 @@ body {
     gap: 10px;
     font-size: 16px;
     font-weight: 400;
-    margin-right: 0px;
+
 }
 .button-group #search {
     width: 347px;
@@ -288,4 +288,146 @@ body {
     top: 635.43px;
     left: 1226.54px;
     border: 2.2px;
+}
+/* shop by categories */
+.topic-icons {
+    width: 1140px;
+    height: 315px;
+    position: absolute;
+    top: 1074px;
+    left: 150px;
+    display: flex;
+}
+.topic {
+    width: 978px;
+    height: 42px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+}
+.left-side-back {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(165, 169, 172, 0.1);
+}
+.right-side-back {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(28, 78, 142, 1);
+}
+.categories .icons #left {
+    width: 24px;
+    rotate: -180deg;
+}
+.categories .icons #right {
+    width: 15px;
+    align-items: center;
+}
+.categories .icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+.cat-container {
+    width: 1140px;
+    height: 215px;
+    position: absolute;
+    display: flex;
+    gap: 30px;
+    margin-top: 150px;
+}
+.cat-container .item1 #circle-1 {
+    width: 165px;
+    height: 165px;
+}
+.cat-container .item #img {
+    width: 105px;
+    height: 120px;
+    position: relative;
+    left: 30px;
+    top: -150px;
+}
+
+.cat-container .text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+    margin-top: -100px;
+}
+
+/* off-box */
+.off-box {
+    width: 1140px;
+    height: auto;
+    position: absolute;
+    top: 1489px;
+    left: 150px;
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+.off-item {
+    width: 555px;
+    height: 250px;
+    background-color: #A5A9AC1A;
+}
+.off-item .container {
+    display: flex;
+    gap: 30px;
+}
+.off-item .percent {
+    width: 74px;
+    height: 34px;
+    position: relative;
+    top: 30px;
+    left: 30px;
+    border-radius: 5px;
+    /* padding: 10px; */
+    background-color: rgba(28, 78, 142, 0.1);
+}
+.percent #percent-num {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #1C4E8E;
+    text-align: center;
+    width: 54px;
+    padding: 8px;
+    margin-top: -5px;
+}
+.off-item .detail {
+    width: 280px;
+    height: 162px;
+    position: relative;
+    top: 69px;
+    left: 30px;
+}
+.off-item #img-laptop {
+    width: 240px;
+    position: absolute;
+    top: 30px;
+    left: 315px;
+}
+.off-item #img-iphone {
+    width: 224px;
+    position: absolute;
+    top: 30px;
+    left: 917px;
+}
+.detail #name {
+    width: 273px;
+    height: 42px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+    margin-top: -30px;
+}
+.detail .blue {
+    width: 157px;
 }
