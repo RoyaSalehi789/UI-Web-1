@@ -65,7 +65,6 @@ body {
     font-size: 16px;
     line-height: 30px;
     font-weight: 400;
-
 }
 .header .container {
     width: 240px;
@@ -429,5 +428,149 @@ body {
     margin-top: -30px;
 }
 .detail .blue {
+    width: 157px;
+}
+
+/* bestseller */
+.bestseller {
+    width: 1140px;
+    height: 806px;
+    position: absolute;
+    top: 1850px;
+    left: 150px;
+}
+.bestseller .topic-container {
+    width: 1140px;
+    height: 42px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+.bestseller .categories {
+    width: 279px;
+    height: 31px;
+    display: flex;
+    gap: 20px;
+}
+.categories .item {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.categories .new {
+    color: #1C4E8E;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+.product {
+    width: 1140px;
+    height: 714px;
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+.ipad {
+    width: 360px;
+    height: 740px;
+    background-color: #A5A9AC1A;
+}
+.ipad #ipad-h2 {
+    width: 200px;
+    height: 84px;
+    position: relative;
+    top: 30px;
+    left: 30px;
+    font-style: 30px;
+    font-weight: 700;
+    line-height: 42px;
+}
+.ipad .price {
+    width: 310px;
+    height: 42px;
+    position: relative;
+    top: 24px;
+    left: 30px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 42px;
+}
+.ipad .ipad-img {
+    width: 330px;
+    height: 515px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+.product .items {
+    width: 750px;
+    height: 714px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    row-gap: 40px;
+}
+.product .item {
+    width: 230px;
+    height: 342px;
+}
+.product .background {
+    width: 230px;
+    height: 230px;
+    background-color: #A5A9AC1A;
+}
+.product .item #img {
+    width: 200.93px;
+    height: 230px;
+    position: relative;
+    left: 15px;
+}
+.product .item .name {
+    width: 230px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+}
+.product .item .price {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+/* iphone-13 */
+.iphone-13 {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 2756px;
+}
+.iphone-13 .text-box {
+   width: 440px;
+   height: 232px;
+   position: absolute;
+   top: 140px;
+   left: 150px;
+   color: white;
+   
+}
+.iphone-13 #img {
+    width: 100%;
+    height: auto;
+}
+.iphone-13 .text-box .name {
+    width: 440px;
+    height: 112px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+}
+.iphone-13 .text-box .content {
+    width: 440px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.iphone-13 .blue {
     width: 157px;
 }
