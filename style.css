@@ -439,14 +439,14 @@ body {
     top: 1850px;
     left: 150px;
 }
-.bestseller .topic-container {
+.topic-container {
     width: 1140px;
     height: 42px;
     display: flex;
     gap: 30px;
     justify-content: space-between;
 }
-.bestseller .categories {
+.categories {
     width: 279px;
     height: 31px;
     display: flex;
@@ -573,4 +573,224 @@ body {
 }
 .iphone-13 .blue {
     width: 157px;
+}
+
+/* top-selling */
+.top-selling {
+    width: 1140px;
+    height: 806px;
+    position: absolute;
+    top: 3356px;
+    left: 150px;
+}
+
+/* icon-box */
+.icon-box {
+    width: 1140px;
+    height: 117px;
+    position: absolute;
+    top: 4262px;
+    left: 150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    gap: 16px;
+}
+.icon-box .icon-item {
+    width: 276px;
+    height: 117px;
+}
+.icon-box .icon-item .icon {
+    width: 36px;
+    height: 36px;
+}
+.icon-box .icon-item .topic {
+    width: 276px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+}
+.icon-box .icon-item .content {
+    width: 276px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.footer {
+    width: 100%;
+    height: 387px;
+    position: absolute;
+    top: 4479px;
+    background-color:#1C4E8E;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+}
+.footer .contact #electro-logo {
+    width: 202.8px;
+    height: 40px;
+    position: relative;
+    top: 30px;
+    left: 150px;
+}
+.contact .icon-text {
+    display: flex;
+}
+.contact .first-column .content {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.contact .first-column {
+    position: relative;
+    top: 60px;
+    left: 150px;
+}
+.contact .first-column .icon-text #call-icon {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 3px;
+    left: 3px;
+    border: 1.5px;
+}
+.contact .first-column .icon-text #icon {
+    width: 20px;
+    height: 18px;
+    position: relative;
+    top: 3px;
+    left: 2px;
+    border: 1.5px;
+}
+.contact .content {
+    width: 215px;
+    color: white;
+    margin-left: 10px;
+    margin-top: auto
+}
+.footer .information {
+    width: 100px;
+    height: 230px;
+    position: absolute;
+    left: 470px;
+    top: 30px;
+}
+.footer .service {
+    width: 165px;
+    height: 230px;
+    position: absolute;
+    left: 660px;
+    top: 30px;
+}
+.footer .service ul li {
+    width: 165px;
+}
+.footer .subscribe ul li {
+    width: 322px;
+}
+.footer .information ul li {
+    width: 100px;
+}
+.footer .subscribe {
+    width: 322px;
+    height: 166px;
+    position: absolute;
+    left: 900px;
+    top: 30px;
+}
+.footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer ul li {
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    color: white;
+}
+.footer .bold {
+    font-weight: 700;
+}
+.subscribe .email {
+    display: flex;
+    width: 322px;
+    height: 56px;
+    border-radius: 10px;
+    padding: 13px 16px;
+    gap: 10px;
+    background-color: #A5A9AC1A;
+    margin-top: 10px;
+}
+.subscribe .email #gmail-icon {
+    width: 21px;
+    height: 18px;
+    position: relative;
+    top: 21px;
+    left: 2px;
+}
+.subscribe .email #arrow-icon {
+    width: 18px;
+    height: 12px;
+    position: relative;
+    top: 25px;
+    left: 65px;
+    color: aliceblue;
+    margin-right: 0px;
+}
+.subscribe .text {
+    margin-top: 10px;
+}
+.footer hr {
+    width: 1140px;
+    height: 1px;
+    position: absolute;
+    top: 324px;
+    left: 150px;
+    color: #1C4E8E;
+}
+.footer .logos {
+    width: 220px;
+    height: 24px;
+    position: absolute;
+    top: 350px;
+    left: 150px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.footer .back {
+    width: 36px;
+    height: 24px;
+    background-color: white;
+    border-radius: 2.4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer #electro-text {
+    width: 295px;
+    height: 30px;
+    position: absolute;
+    top: 335px;
+    left: 573px;
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+}
+.footer .social .img {
+    width: 4px;
+    height: 24px;
+}
+.footer .social {
+    width: 112px;
+    height: 24px;
+    position: absolute;
+    top: 350px;
+    left: 1178px;
+    display: flex;
+    gap: 20px;
+
 }
