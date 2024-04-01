@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+        <div>
+            <img src="images/Electro.png" alt="" class="electro-logo">
+            <div class="button-group"> 
+                <select name="all" id="all" class="button">
+                    <option value="all">All</option>
+                </select>
+                <input type="search" id="search" class="button" placeholder="Search">
+                <button class="button blue" type="submit">search</button> 
+            </div> 
+        </div>
+
+        <div class="container">
+            <div class="icon-container">
+            <img src="icons/search 02.png" alt="" class="search-icon">
+            <img src="icons/Vector.png" alt="" class="heart-icon">
+            <img src="icons/cart.png" alt="" class="cart-icon">
+            <img src="icons/Cart Item.png" alt="" class="item-icon">
+            </div>
+            <button type="button" class="blue">Login</button>
+            
+        </div>
+        <br>
+        <br>
+        <div class="main-nav">
+            <ul>
+                <li><select name="categories" id="all-categories">
+                    <option value="categories">All Categories</option>
+                </select></li>
+                <div class="nav-item">
+                    <li><a href="" >Home</a></li>
+                    <li><select name="Shop" id="shop">
+                        <option value="shop">Shop</option>
+                    </select></li>
+                    <li><a href="" >About Us</a></li>
+                    <li><a href="" >Blog</a></li>
+                    <li><a href="" >Contact Us</a></li>
+                </div>
+                
+            </ul>
+        </div>
+    </section>
+
+    <section class="product-detail">
+        <p>Home <span><img src="icons/direaction right.png" alt=""></span> Shop <span>
+            <img src="icons/direaction right.png" alt=""></span> Apple iPhone 14 Pro</p>
+        <div class="detail-box">
+            <div class="back">
+                <img src="images/image 16 (1).png" alt="iphone-14-pro">
+            </div>
+            <div class="content">
+                <div class="iphone-stock">
+                    <h1>Apple iPhone 14 Pro</h1>
+                    <p>In Stock</p>
+                </div>
+                <div class="star-text">
+                    <div class="stars">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                    </div>
+                    <p>5.0 (121 Reviews)</p>
+                </div>
+                <p class="price">$1999.00</p>
+                <p class="text">It is a long established fact that a reader will be distracted by the readable content of a 
+                    page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less 
+                    normal distribution.</p>
+
+                <div class="color">
+                    <p>Color</p>
+                    <div class="pallet">
+                        <div id="gray" class="color-rectangle"></div>
+                        <div id="blue" class="color-rectangle"></div>
+                        <div id="black" class="color-rectangle"></div>
+                        <div id="purple" class="color-rectangle"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="group-input">
+                        <button type="button" class="button minus"><img src="icons/minus.png" alt="-"></button>
+                        <div class="button"><var>1</var></div>
+                        <button type="button" class="button plus"><img src="icons/plus.png" alt="+"></button>
+                    </div>
+                    <button type="button" class="blue">Add to Cart</button>
+                    <img src="icons/heart.png" alt="favorite">
+                </div>
+                <div class="share-box">
+                    <p class="topic">Share</p>
+                </div>
+                <div class="social">
+                    <img src="icons/facebook-black.png" alt="facebook">
+                    <img src="icons/twitter-black.png" alt="x">
+                    <img src="icons/instagram-black.png" alt="instagram">
+                </div>
+            </div>
+        </div>
+        <div class="pic-container">
+            <img src="images/image 16 (1).png" alt="iphone-14-pro" class="bottom-pic">
+            <img src="images/image 16 (1).png" alt="iphone-14-pro" class="bottom-pic">
+            <img src="images/image 16 (1).png" alt="iphone-14-pro" class="bottom-pic">
+            <img src="images/image 16 (1).png" alt="iphone-14-pro" class="bottom-pic">
+        </div>
+        
+        <!-- Tab links -->
+        <div class="tabs">
+            <div class="tab">
+                <button class="tablinks active" onclick="openCity(event, 'Descriptions')">Descriptions</button>
+                <button class="tablinks" onclick="openCity(event, 'Additional')">Additional Information</button>
+                <button class="tablinks" onclick="openCity(event, 'Reviews')">Reviews</button>
+            </div>
+            <hr>
+            <!-- Tab content -->
+            <div id="Descriptions" class="tabcontent active">
+                <p class="text">t is a long established fact that a reader will be distracted by the readable content of a page 
+                    when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                     readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as 
+                     their default model text, and a search for 'lorem ipsum' will uncover many web sites still in 
+                     their infancy. 
+                     <br><br><br>
+                    Various versions have evolved over the years, sometimes by accident, sometimes on purpose 
+                    (injected humour and the like).</p>
+            </div>
+            
+            <div id="Additional" class="tabcontent">
+                <div class="info-cols">
+                    <ul id="first">
+                        <li>Brand</li>
+                        <li>Item Height</li>
+                        <li>Item Width</li>
+                        <li>Screen Size</li>
+                        <li>Model Number</li>
+                        <li>RAM Size</li>
+                        <li>Operating System</li>
+                    </ul>
+                    
+                    <ul id="last">
+                        <li>Apple</li>
+                        <li>65 CM</li>
+                        <li>31.4 CM</li>
+                        <li>6.5 Inch</li>
+                        <li>MF841HN/A</li>
+                        <li>6 GB</li>
+                        <li>ios 17</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="Reviews" class="tabcontent">
+                <div class="comment">
+                    <h3>Customer Reviews</h3>
+                    <div class="comment-item">
+                        <div class="profile">
+                            <img src="images/Ellipse 956@2x.png" alt="profile" id="img">
+                            <div class="name-star">
+                                <p>Mark Williams</p>
+                                <div class="stars">
+                                    <img src="icons/Star 2.png" alt="star">
+                                    <img src="icons/Star 2.png" alt="star">
+                                    <img src="icons/Star 2.png" alt="star">
+                                    <img src="icons/Star 2.png" alt="star">
+                                    <img src="icons/Star 2.png" alt="star">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-content">
+                            <p id="short">Excellent Product, I Love It 😍</p>
+                            <p id="long">It is a long established fact that a reader will be distracted by the readable 
+                                content of a page when looking at its layout. The point of using Lorem Ipsum is 
+                                that it has a more-or-less normal distribution of letters, as opposed to using 
+                                'Content here, content here', making it look like readable English.</p>
+                            <p id="date"><span>Review by</span> Electro <span>Posted on</span> Sep 08, 2023</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="comment-item">
+                        <div class="profile">
+                            <img src="images/Ellipse 957 (2).png" alt="profile" id="img">
+                            <div class="name-star">
+                                <p>Alexa Johnson</p>
+                                <div class="stars">
+                                    <img src="icons/Star 2.png" alt="star">
+                                    <img src="icons/Star 2.png" alt="star">
+                                    <img src="icons/Star 2.png" alt="star">
+                                    <img src="icons/Star 2.png" alt="star">
+                                    <img src="icons/Star 2.png" alt="star">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-content">
+                            <p id="short">My Brother is very much happy with this iPhone</p>
+                            <p id="long">It is a long established fact that a reader will be distracted by the
+                                 readable content of a page when looking at its layout. The point of using Lorem 
+                                 Ipsum is that it has a more-or-less normal distribution of letters, as opposed to 
+                                 using 'Content here, content here', making it look like readable English.</p>
+                            <p id="date"><span>Review by</span> Electro <span>Posted on</span> Sep 08, 2023</p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="your-review">
+                    <h3>Add your Review</h3>
+                    <div class="form">
+                        <p id="topic">Your Rating</p>
+                        <div class="rating">
+                            <img src="icons/star.png" alt="star">
+                            <hr>
+                            <img src="icons/star.png" alt="star">
+                            <img src="icons/star.png" alt="star">
+                            <hr>
+                            <img src="icons/star.png" alt="star">
+                            <img src="icons/star.png" alt="star">
+                            <img src="icons/star.png" alt="star">
+                            <hr>
+                            <img src="icons/star.png" alt="star">
+                            <img src="icons/star.png" alt="star">
+                            <img src="icons/star.png" alt="star">
+                            <img src="icons/star.png" alt="star">
+                            <hr>
+                            <img src="icons/star.png" alt="star">
+                            <img src="icons/star.png" alt="star">
+                            <img src="icons/star.png" alt="star">
+                            <img src="icons/star.png" alt="star">
+                            <img src="icons/star.png" alt="star">
+                        </div>
+                        <form action="">
+                            <label for="name">Name</label>
+                            <br>
+                            <input type="text" id="name" placeholder="Enter Your Name">
+                            <br><br>
+                            <label for="email">Email Address</label>
+                            <br>
+                            <input type="email" id="email" placeholder="Enter Your Email">
+                            <br><br>
+                            <label for="recview">Your Review</label>
+                            <br>
+                            <textarea name="" id="recview" cols="30" rows="10" placeholder="Enter Your Review">
+                            </textarea>
+                            <button type="button">Submit</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- related-product -->
+    <section class="related-product">
+        <h2>Related Products</h2>
+        <div class="items">
+            <div class="item">
+                <img src="images/image 22.png" alt="Apple iPhone 14 Plus" id="img">
+                <div class="details">
+                    <h3 class="name">Apple iPhone 14 Plus</h3>
+                    <div class="stars">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                    </div>
+                    <p class="price">$850.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/image 26.png" alt="Xiaomi Fimi X8 Mini" id="img">
+                <div class="details">
+                    <h3 class="name">Xiaomi Fimi X8 Mini</h3>
+                    <div class="stars">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                    </div>
+                    <p class="price">$650.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/image 19.png" alt="Apple iPad Mini 6 Wi-Fi" id="img">
+                <div class="details">
+                    <h3 class="name">Apple iPad Mini 6 Wi-Fi</h3>
+                    <div class="stars">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                    </div>
+                    <p class="price">$500.00</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/image 25.png" alt="Asus ROG Delta S" id="img">
+                <div class="details">
+                    <h3 class="name">Asus ROG Delta S</h3>
+                    <div class="stars">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                        <img src="icons/Star 2.png" alt="star">
+                    </div>
+                    <p class="price">$250.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="footer-container">
+            <div class="contact">
+                <img src="images/Logo + Text.png" alt="" id="electro-logo">
+                <div class="first-col">
+                    <div class="icon-text call">
+                        <img src="icons/calling.png" alt="phone-number" id="icon">
+                        <p class="content">(316) 555-0116</p>
+                    </div>
+                    <div class="icon-text">
+                        <img src="icons/gmail.png" alt="email" id="icon">
+                        <p class="content">electro@example.com</p>
+                    </div>
+                    <div class="icon-text">
+                        <img src="icons/location.png" alt="location" id="icon">
+                        <p class="content">4140 Parker Rd. Allentown, 
+                            New Mexico 31134</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="information col">
+                <ul class="info-items">
+                    <li class="bold">Information</li>
+                    <li>My Account</li>
+                    <li>Login</li>
+                    <li>My Cart</li>
+                    <li>My Wishlist</li>
+                    <li>Checkout</li>
+                </ul>
+            </div>
+    
+            <div class="service col">
+                <ul class="info-items">
+                    <li class="bold">Service</li>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Delivery Information</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms & Conditions</li>
+                </ul>
+            </div>
+    
+            <div class="subscribe col">
+                <ul class="info-items">
+                    <li class="bold">Subscribe</li>
+                    <li class="text">Enter your email below to be the first to know about new collections.</li>
+                    <li>
+                        <div class="icon-text email">
+                            <img src="icons/gmail.png" alt="email" id="gmail-icon">
+                            <p class="content">Your Email</p>
+                            <img src="icons/arrow right.png" alt="" id="arrow-icon">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="social-text">
+            <div class="icons">
+                <div class="logos">
+                    <div class="back">
+                        <img src="icons/visa.png" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="icons/red-orange.png" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="icons/g-pay.png" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="icons/amex.png" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="icons/blue.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <p id="electro-text">©2023 Electro All Rights are reserved️ </p>
+            <div class="social">
+                <img src="icons/facebook.png" alt="facebook">
+                <img src="icons/instagram.png" alt="instagram">
+                <img src="icons/twitter.png" alt="x">
+            </div>
+        </div>
+    </section>
+<script src="myjs.js"></script>
+</body>
+</html>
