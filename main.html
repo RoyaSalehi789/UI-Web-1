@@ -29,7 +29,7 @@
                     <img src="icons/cart.png" alt="" class="cart-icon">
                     <img src="icons/Cart Item.png" alt="item" class="item-icon">
                     </div>
-                    <button type="button" class="blue">Login</button>
+                    <button type="button" id="log-in-btn" class="blue">Login</button>
                 </div>
             </div>
             <br>
@@ -529,3 +529,48 @@
             </div>
         </div>
     </section>
+
+    <!-- log-in-page -->
+
+    <div id="log-in-modal" class="modal">
+        <div class="login-content">
+            <span class="close">&times;</span>
+            <div class="modal-container">
+                <p id="bold">Welcome 👋 </p>
+                <p id="text">Please login here</p>
+                <form action="">
+                    <label for="email">Email Address</label>
+                    <br>
+                    <input type="email" placeholder="kristin.watson@example.com" id="input">
+                    <br><br>
+                    <label for="password">Password</label><br>
+                    <input type="password" placeholder="••••••••••••••••••" id="input">
+                    <br><br>
+                    
+                    <div class="remmeber-container">
+                        <div class="checkbox">
+                            <label for="remmember">Remember Me</label><br>
+                            <input type="checkbox">
+                        </div>
+                        <p>Forgot Password?</p>
+                    </div>
+
+                    <button type="button" class="blue">Login</button>
+                    <button type="button" class="blue white">Register</button>            
+                </form>
+                <div class="login-with-container">
+                    <hr>
+                    <p>Or Login With</p>
+                    <hr>
+                </div>
+                <div class="btn-container">
+                    <button type="button" class="btn"><img src="icons/google.png" alt="google" id="icon">Login with Google</button>
+                    <button type="button" class="btn"><img src="icons/apple.png" alt="Apple" id="icon">Login with Apple</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="myjs.js"></script>
+</body>
+</html>
