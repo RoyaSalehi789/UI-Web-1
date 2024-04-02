@@ -332,9 +332,6 @@ body {
 .off-box {
     width: 1140px;
     height: auto;
-    /* position: absolute;
-    top: 1489px;
-    left: 150px; */
     display: flex;
     gap: 30px;
     margin: auto;
@@ -722,13 +719,13 @@ body {
     cursor: pointer;
 }
   
-.login-content .modal-container {
+.content .modal-container {
     width: 420px;
     background-color: white;
     border-radius: 16px;
     margin-top: 40px;
 }
-.login-content {
+.content {
     display: flex;
     justify-content: center;
 }
@@ -744,12 +741,13 @@ body {
     color: #A5A9AC;
     padding-top: 0px;
     margin-top: 0px;
+    line-height: 30px;
 }
 .modal-container label {
     font-size: 12px;
     font-weight: 400;
 }
-.modal-container #input {
+.modal-container .input {
     width: 380px;
     height: 56px;
     border-radius: 10px;
@@ -770,16 +768,19 @@ form {
     align-items: center;
     justify-content: space-between;
 }
-.remmeber-container .checkbox {
+.checkbox {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     gap: 3px;
 }
-.remmeber-container .checkbox label {
+.agree {
+    float: left;
+}
+.checkbox label {
     font-size: 16px;
 }
-.remmeber-container input[type="checkbox"] {
+input[type="checkbox"] {
     accent-color: #1C4E8E;
     width: 20px;
     height: 20px;
@@ -821,5 +822,67 @@ form {
 .btn-container {
     width: 380px;
     margin: -50px auto 20px auto;
-    
+}
+.code{
+    display: flex;
+    gap: 20px;
+    width: 380px;
+    margin: auto;
+}
+.code .digit {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #1C4E8E;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.code .black {
+    border: #A5A9AC33 solid 1px;
+}
+.circles {
+    width: 108px;
+    height: 108px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circles .first {
+    width: 108px;
+    height: 108px;
+    background-color: #1C4E8E1A;
+    border-radius: 100%;
+}
+.circles .second {
+    width: 64px;
+    height: 64px;
+    background-color: #1C4E8E;
+    border-radius: 100%;
+}
+.circles .third {
+    width: 86px;
+    height: 86px;
+    background-color: #1C4E8E33;
+    border-radius: 100%;
+}
+#Successfull-modal #bold {
+    width: 352px;
+    display: flex;
+    text-align: center;
+    color: black;
+    line-height: 36px;
+}
+#Successfull-modal #text {
+    width: 352px;
+    display: flex;
+    text-align: center;
+    color: black;
+    line-height: 30px;
+    margin: 15px 0px 0px 0px;
+}
+#back-login-btn, #Successfull-btn {
+    margin-bottom: 20px;
 }

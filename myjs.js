@@ -1,41 +1,34 @@
-function openCity(evt, tabName) {
-    // Declare all variables
+function switchTab(evt, tabName) {
     var i, tabcontent, tablinks;
-  
-    // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
-  
-    // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-  
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   }
 
-  // log-in
+// log-in
+function modals(modal, btn){
+  var modal = document.getElementById(modal);
+  var btn = document.getElementById(btn);
 
-var modal = document.getElementById("log-in-modal");
-var btn = document.getElementById("log-in-btn");
+  var span = document.getElementsByClassName("close")[0];
 
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  span.onclick = function() {
     modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
   }
 }
