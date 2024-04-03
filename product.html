@@ -10,7 +10,7 @@
 <body>
     <section class="header">
         <div class="header-container">
-            <img src="images/Electro.png" alt="" class="electro-logo">
+            <img src="icons/Logo + Text (1).png" alt="" class="electro-logo">
             <div class="button-group"> 
                 <select name="all" id="all" class="button back">
                     <option value="all">All</option>
@@ -22,7 +22,7 @@
                 <div class="icon-container">
                 <img src="icons/search 02.png" alt="search" class="search-icon">
                 <img src="icons/Vector.png" alt="heart" class="heart-icon">
-                <img src="icons/cart.png" alt="" class="cart-icon">
+                <img src="icons/cart.png" alt="" id="cart-btn" class="cart-icon" onclick="modals('cart-modal', 'cart-btn')">
                 <img src="icons/Cart Item.png" alt="item" class="item-icon">
                 </div>
                 <button type="button" class="blue">Login</button>
@@ -87,7 +87,7 @@
                 <div class="container">
                     <div class="group-input">
                         <button type="button" class="button minus"><img src="icons/minus.png" alt="-"></button>
-                        <div class="button"><var>1</var></div>
+                        <p class="button">1</p>
                         <button type="button" class="button plus"><img src="icons/plus.png" alt="+"></button>
                     </div>
                     <button type="button" class="blue">Add to Cart</button>
@@ -398,12 +398,57 @@
             </div>
             <p id="electro-text">©2023 Electro All Rights are reserved️ </p>
             <div class="social">
-                <img src="icons/facebook.png" alt="facebook">
-                <img src="icons/instagram.png" alt="instagram">
-                <img src="icons/twitter.png" alt="x">
+                <img src="icons/facebook.png" alt="facebook" id="facebook">
+                <img src="icons/instagram.png" alt="instagram" id="instagram">
+                <img src="icons/twitter.png" alt="x" id="twitter">
             </div>
         </div>
     </section>
+
+    <!-- cart-page -->
+    <div id="cart-modal" class="modal">
+        <div class="content cart">
+            <div class="modal-container">
+                <p id="black">You have <span class="bold">2 items</span> in your cart</p>
+                <div class="item-container">
+                    <div class="item">
+                        <div class="pic">
+                            <img src="images/image 16 (1).png" alt="">
+                        </div>
+                        <div class="details">
+                            <p>Apple iPhone 14 Pro</p>
+                            <p class="price">$1999.00</p>
+                            <div class="icon-text">
+                                <p>QTY: 1</p>
+                                <img src="icons/delete.png" alt="delete" id="delete">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="item">
+                        <div class="pic">
+                            <img src="images/image 25.png" alt="">
+                        </div>
+                        <div class="details">
+                            <p>Asus ROG Delta S</p>
+                            <p class="price">$250.00</p>
+                            <div class="icon-text">
+                                <p>QTY: 1</p>
+                                <img src="icons/delete.png" alt="delete" id="delete">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="total">
+                        <p>Subtotal</p>
+                        <p>$2249.00</p>
+                    </div>
+                    <button type="button" class="blue gray">View Cart</button>
+                    <button type="button" class="blue">Checkout</button> 
+                </div>
+            </div>
+        </div>
+    </div>  
 <script src="myjs.js"></script>
 </body>
 </html>
