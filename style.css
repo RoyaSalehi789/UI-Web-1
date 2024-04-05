@@ -1045,31 +1045,6 @@ input[type="checkbox"] {
     margin-bottom: 20px;
 }
 
-/* media*/
-/* @media screen and (max-width: 640px){
-
-   .categories-shop .cat-container {
-    grid-template-columns: repeat(3, 165px);
-   }
-   .off-box {
-    grid-template-columns: repeat(1, 555px);
-   }
-   .product {
-    flex-direction: column;
-   }
-   .product .items {
-    grid-template-columns: repeat(2, 230px);
-   }
-   .icon-box {
-    grid-template-columns: repeat(2, 276px);
-   }
-   .footer-container {
-    flex-wrap: wrap;
-   }
-   .social-text {
-    flex-wrap: wrap;
-   }
-} */
 @media screen and (max-width: 1439px){
     .headphone .shape {
         display: none;
@@ -1300,4 +1275,4 @@ input[type="checkbox"] {
     .top-selling .ipad {
         margin-left: 0%;
     }
-    
+}

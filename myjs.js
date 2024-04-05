@@ -38,6 +38,10 @@ function modals(modal, button){
       document.getElementById("otp-modal").style.display = "none";
       modal.style.display = "block";
     }
+    if(button == "back-login-btn") {
+      document.getElementById("Successfull-modal").style.display = "none";
+      modal.style.display = "block";
+    }
     if(button == "cart-btn") {
       modal.style.display = "block";
     }

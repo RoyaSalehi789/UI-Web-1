@@ -4,16 +4,14 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-.header-headphone {
-    background-color: #A5A9AC1A;
-}
 .electro-logo {
     width: 178.5px;
     height: 35px;
 }
 .header-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
     width: 1140px;
     margin: auto;
     padding-top: 20px;
@@ -400,7 +398,6 @@ body {
 }
 .comment .comment-item {
     width: 1140px;
-    height: 239px;
 }
 .comment .comment-item .profile {
     width: 200px;
@@ -548,10 +545,12 @@ body {
     color: white;
 }
 .footer-container {
-    display: flex;
+    width: 1140px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    gap: 50px;
     padding-top: 20px;
+    margin: auto;
 }
 .footer-container .contact {
     width: 251px;
@@ -963,19 +962,150 @@ input[type="checkbox"] {
 #back-login-btn {
     margin-bottom: 50px;
 }
-
-@media screen and (max-width: 640px){
-    .product-detail .detail-box {
-        flex-wrap: wrap;
+@media screen and (max-width: 1170px){
+    .header .electro-logo {
+        margin-left: 15%;
     }
-    .tabs {
-        width: 520px;
+    .main-nav ul {
+        margin-left: 2%;
     }
-    /* .comment-item {
-        width: 520px;
-    } */
+    .product-detail #path {
+        margin-left: 4%;
+    }
+    .tabs{
+        margin-left: 3%;
+        width: 1000px;
+    }
+    .related-product {
+        margin-left: 5%;
+    }
     .related-product .items {
         grid-template-columns: repeat(2, 230px);
-        gap: 30px;
-       }
+        gap: 100px;
+        margin-left: 20%;
+    }
+    .comment-content #long {
+        width: 80vw;
+    }
+    .your-review form input, .your-review form textarea {
+        width: 80vw;
+    }
+    #Descriptions .text {
+        width: 80vw;
+    }
+}
+@media screen and (max-width: 1140px){
+    .header-container{
+        grid-template-columns: repeat(1,200px);
+    }
+    .header-container .electro-logo {
+        padding: 20px 40vw 0;
+    }
+    .header-container .button-group{
+        padding: 0 25vw ;
+    }
+    .header-container .container{
+        padding: 0 40vw ;
+    }
+    .product-detail .detail-box {
+        display: block;
+        margin-left: 25%;
+    }
+    .product-detail .bottom-pic {
+        margin-left: 230%;
+    }
+    .footer-container {
+        width: 800px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .social-text  {
+        display: block;
+        margin: 0 40%;
+    }
+    .social-text .social {
+        margin-left: 5%;
+    }
+    .footer hr {
+        width: 85%;
+        margin-bottom: 40px;
+    }
+}
+@media screen and (max-width: 870px) {
+    .button-group {
+        display: none;
+    }
+    .main-nav ul {
+        display: block;
+    }
+    .main-nav .nav-item {
+        margin-top: 5%;
+    }
+    .header .electro-logo {
+        margin-left: -10%;
+    }
+    .header .container {
+        margin-left: -20%;
+    }
+    .pic-text .bold {
+        font-size: 50px;
+    }
+    .product-detail .detail-box {
+        flex-wrap: wrap;
+        margin-left: 10%;
+    }
+    .product-detail .bottom-pic {
+        margin-left: 90%;
+    }
+    .tabs{
+        width: 750px;
+    }
+    .related-product .items {
+        grid-template-columns: repeat(1, 230px);
+        margin-left: 20%;
+    }
+
+    .footer-container {
+        width: 300px;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .social-text  {
+        display: block;
+        margin: 0 30%;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .product-detail .detail-box {
+        margin-left: 0%;
+    }
+    .product-detail .back {
+        width: 300px;
+        height: 300px;
+        margin-left: 10%;
+    }
+    .product-detail .back img {
+        width: 250px;
+        height: auto;
+    }
+    .product-detail .content {
+        margin-left: 3%;
+        margin-top: 3%;
+    }
+    .product-detail .content .text {
+        width: 450px;
+    }
+    .product-detail .content  .blue {
+        width: 250px;
+    }
+    .product-detail .bottom-pic {
+        margin-left: 0%;
+    }
+    .related-product .items {
+        margin-left: 10%;
+    }
+    .tab button{
+        font-size: 15px;
+    }
+
 }
