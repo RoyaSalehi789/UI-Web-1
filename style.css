@@ -970,25 +970,27 @@ input[type="checkbox"] {
     width: 380px;
     margin: -50px auto 20px auto;
 }
-.code{
+.inputs{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     width: 380px;
     margin: auto;
 }
-.code .digit {
+.code .input {
     width: 60px;
     height: 60px;
-    border: 1px solid #1C4E8E;
+    border: 1px solid black;
     border-radius: 10px;
     font-size: 24px;
     font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
 }
-.code .black {
-    border: #A5A9AC33 solid 1px;
+#digit:valid {
+    outline: solid #1C4E8E 1px;
+}
+#digit:invalid {
+    outline: solid black 1px;
 }
 #otp-modal button {
     margin-top: 20px;

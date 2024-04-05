@@ -597,11 +597,18 @@
         <p id="bold">Enter OTP</p>
         <p id="text">We have share a code of your registered email address kristin.watson@example.com</p>
         <div class="code">
-            <div class="digit">3</div>
-            <div class="digit">1</div>
-            <div class="digit black"></div>
-            <div class="digit black"></div>
-            <div class="digit black"></div>
+            <div id="inputs" class="inputs">
+                <input class="input" type="text" id="digit" required
+                    inputmode="numeric" maxlength="1" />
+                <input class="input" type="text" id="digit" required
+                    inputmode="numeric" maxlength="1" />
+                <input class="input" type="text" id="digit" required
+                    inputmode="numeric" maxlength="1" />
+                <input class="input" type="text" id="digit" required
+                    inputmode="numeric" maxlength="1" />
+                <input class="input" type="text" id="digit" required
+                    inputmode="numeric" maxlength="1" />
+            </div>
         </div>
         <form action="">
             <button type="button" class="blue" id="Successfull-btn" onclick="modals('Successfull-modal', 'Successfull-btn')">Send OTP</button>            
