@@ -12,8 +12,9 @@ body {
     height: 35px;
 }
 .header-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
     width: 1140px;
     margin: auto;
     padding-top: 20px;
@@ -330,11 +331,11 @@ body {
 }
 .topic-icons {
     width: 1140px;
-    margin-top: 50px;
-    margin-left: 150px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin: auto;
     margin-top: 50px;
+    gap: 30px;
 }
 
 .cat-container {
@@ -628,10 +629,12 @@ body {
     color: white;
 }
 .footer-container {
-    display: flex;
+    width: 1140px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    gap: 50px;
     padding-top: 20px;
+    margin: auto;
 }
 .footer-container .contact {
     width: 251px;
@@ -799,13 +802,6 @@ body {
     transform: translateX(-100%);
     z-index: 1000;
 }
-
-/* .modal .content {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 .modal-container #bold {
     font-size: 30px;
     font-weight: 700;
@@ -994,6 +990,9 @@ input[type="checkbox"] {
 .code .black {
     border: #A5A9AC33 solid 1px;
 }
+#otp-modal button {
+    margin-top: 20px;
+}
 .circles {
     width: 108px;
     margin: auto;
@@ -1040,14 +1039,15 @@ input[type="checkbox"] {
     text-align: center;
     color: black;
     line-height: 30px;
-    margin: 15px 0px 0px 0px;
+    margin: 15px auto 0px auto;
 }
 #back-login-btn, #Successfull-btn {
     margin-bottom: 20px;
 }
 
 /* media*/
-@media screen and (max-width: 640px){
+/* @media screen and (max-width: 640px){
+
    .categories-shop .cat-container {
     grid-template-columns: repeat(3, 165px);
    }
@@ -1066,7 +1066,238 @@ input[type="checkbox"] {
    .footer-container {
     flex-wrap: wrap;
    }
-   /* .social-text {
+   .social-text {
     flex-wrap: wrap;
-   } */
+   }
+} */
+@media screen and (max-width: 1439px){
+    .headphone .shape {
+        display: none;
+    }
 }
+@media screen and (max-width: 1170px){
+    .pic-text {
+        flex-wrap: wrap;
+        padding: 0 25%;
+    }
+    .header-container {
+        flex-wrap: wrap;
+    }
+    .icon-box {
+        padding: 0 3%;
+    }
+}
+@media screen and (max-width: 1140px){
+    .header-container{
+        grid-template-columns: repeat(1,200px);
+    }
+    .header-container .electro-logo {
+        padding: 20px 40vw 0;
+    }
+    .header-container .button-group{
+        padding: 0 25vw ;
+    }
+    .header-container .container{
+        padding: 0 40vw ;
+    }
+    .headphone button {
+        margin-left: 25%;
+    }
+    .categories-shop .icons {
+        position: absolute;
+        margin-left: 80%;
+    }
+    .categories-shop .cat-container {
+        grid-template-columns: repeat(3, 165px);
+        padding: 5% 22%;
+    }
+    .categories-shop h2 {
+        padding-left: 5%;
+    }
+    .off-box {
+        grid-template-columns: repeat(1, 555px);
+        padding-left: 22%;
+    }
+    .bestseller .product {
+        margin-left: 10vw;
+    }
+    .bestseller .topic-container {
+        display: block;
+        padding-left: 5%;
+    }
+    .bestseller .items {
+        grid-template-columns: repeat(2, 230px);
+    }
+    .bestseller .ipad {
+        margin-top: 11%;
+    }
+    .iphone-13 .text-box {
+        padding: 10% 0;
+    }
+    .top-selling .topic-container {
+        display: block;
+        padding-left: 5%;
+        margin-top: -15%;
+    }
+    .top-selling .product {
+        margin-left: 10vw;
+    }
+    .top-selling .items {
+        grid-template-columns: repeat(2, 230px);
+    }
+    .top-selling .ipad {
+        margin-top: 11%;
+    }
+    .icon-box {
+        width: 800px;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 15%;
+    }
+    .footer-container {
+        width: 800px;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .social-text  {
+        display: block;
+        margin: 0 40%;
+    }
+    .social-text .social {
+        margin-left: 5%;
+    }
+    .footer hr {
+        width: 85%;
+        margin-bottom: 40px;
+    }
+}
+@media screen and (max-width: 870px) {
+    .button-group {
+        display: none;
+    }
+    .main-nav ul {
+        display: block;
+    }
+    .main-nav .nav-item {
+        margin-top: 5%;
+    }
+    .header .electro-logo {
+        margin-left: -10%;
+    }
+    .header .container {
+        margin-left: -20%;
+    }
+    .pic-text .bold {
+        font-size: 50px;
+    }
+    .headphone .pic-text .text {
+        width: 300px;
+    }
+    .headphone .pic-text button {
+        margin-left: 12%;
+    }
+    .categories-shop .cat-container {
+        grid-template-columns: repeat(2, 165px);
+        padding: 5% 22%;
+    }
+    .off-box {
+        padding-left: 7%;
+    }
+    .bestseller .product {
+        display: block;
+    }
+    .bestseller .items {
+        grid-template-columns: repeat(2, 230px);
+        margin-left: 2%;
+        margin-top: 5%;
+    }
+    .bestseller .ipad {
+        margin-left: 7%;
+    }
+    .iphone-13 .text-box {
+        margin-left: 10%;
+        margin-top: -300px;
+    }
+    .iphone-13 .text-box .name {
+        width: 150px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .iphone-13 .text-box .content {
+        width: 250px;
+        font-size: 12px;
+        margin-top: -13%;
+    }
+    .iphone-13 .text-box button {
+        width: 140px;
+        height: 40px;
+    }
+    .top-selling {
+        margin-top: -2%;
+    }
+    .top-selling .product {
+        display: block;
+    }
+    .top-selling .items {
+        grid-template-columns: repeat(2, 230px);
+        margin-left: 2%;
+        margin-top: 5%;
+    }
+    .top-selling .ipad {
+        margin-left: 7%;
+    }
+    .icon-box {
+        width: 800px;
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 25%;
+    }
+    .footer-container {
+        width: 300px;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .social-text  {
+        display: block;
+        margin: 0 30%;
+    }
+}
+@media screen and (max-width: 690px) {
+    .iphone-13 .text-box {
+        margin-top: -280px;
+    }
+}
+@media screen and (max-width: 620px) {
+    .iphone-13 .text-box {
+        margin-top: -250px;
+    }
+    .categories-shop .icons {
+        display: none;
+    }
+}
+@media screen and (max-width: 545px) {
+    .headphone .pic-text .text-container {
+        margin-left: -3%;
+    }
+    .categories-shop .cat-container {
+        padding: 5% 12%;
+    }
+    .off-box {
+        padding-left: 0.5%;
+    }
+    .bestseller .items {
+        grid-template-columns: repeat(1, 230px);
+        margin-left: 6%;
+    }
+    .bestseller .ipad {
+        margin-left: 0%;
+    }
+    .iphone-13 .text-box {
+        margin-top: -240px;
+    }
+    .top-selling .items {
+        grid-template-columns: repeat(1, 230px);
+        margin-left: 6%;
+    }
+    .top-selling .ipad {
+        margin-left: 0%;
+    }
+    

@@ -59,18 +59,18 @@
         </section>
     
         <section class="headphone">
-            <img src="images/_Group_.png" alt="" id="triangle">
-            <img src="images/_Path_.png" alt="" id="circle-1">
-            <img src="images/_Path_ (1).png" alt="" id="circle-2">
-            <img src="images/_Path_ (2).png" alt="" id="circle-3">
-            <img src="images/_Path_ (3).png" alt="" id="circle-4">
-            <img src="images/_Path_ (4).png" alt="" id="circle-5">
-            <img src="images/_Group_ (1).png" alt="" id="circle-6">
-            <img src="images/_Path_ (7).png" alt="" id="circle-10">
-            <img src="images/_Path_ (8).png" alt="" id="circle-7">
-            <img src="images/_Path_ (5).png" alt="" id="circle-8">
-            <img src="images/_Path_ (6).png" alt="" id="circle-9">
-            <img src="images/Ellipse 1200.png" alt="" id="circle">
+            <img src="images/_Group_.png" alt="" id="triangle" class="shape">
+            <img src="images/_Path_.png" alt="" id="circle-1" class="shape">
+            <img src="images/_Path_ (1).png" alt="" id="circle-2" class="shape">
+            <img src="images/_Path_ (2).png" alt="" id="circle-3" class="shape">
+            <img src="images/_Path_ (3).png" alt="" id="circle-4" class="shape">
+            <img src="images/_Path_ (4).png" alt="" id="circle-5" class="shape">
+            <img src="images/_Group_ (1).png" alt="" id="circle-6" class="shape">
+            <img src="images/_Path_ (7).png" alt="" id="circle-10" class="shape">
+            <img src="images/_Path_ (8).png" alt="" id="circle-7" class="shape">
+            <img src="images/_Path_ (5).png" alt="" id="circle-8" class="shape">
+            <img src="images/_Path_ (6).png" alt="" id="circle-9" class="shape">
+            <img src="images/Ellipse 1200.png" alt="" id="circle" class="shape">
             <div class="pic-text">
                 <div class="text-container">
                     <p class="bold">Great Sound <br> With Solo <br> Headphone</p>
@@ -557,115 +557,113 @@
     <!-- register-page -->
     <div id="register-modal" class="modal modal-structure">
         <div class="modal-container">
-            <div class="close" id="close-btn" onclick="modals('register-modal', 'close-btn')">&times;</div>
-            <p id="bold">Create New Account</p>
-            <p id="text">Please enter details</p>
-            <form action="">
-                <label for="name">Name</label>
-                <br>
-                <input type="text" placeholder="Kristin Watson" id="name" class="input">
-                <label for="email">Email Address</label>
-                <br>
-                <input type="email" placeholder="kristin.watson@example.com" id="email" class="input">
-                <br><br>
-                <label for="password">Password</label><br>
-                <input type="password" placeholder="••••••••••••••••••" id="password" class="input">
-                <br><br>
-                
-                <div class="checkbox agree">
-                    <label for="remmember">I agree to the Terms & Conditions</label><br>
-                    <input type="checkbox">
-                </div>
-                <button type="button" class="blue" id="otp-btn" onclick="modals('otp-modal', 'otp-btn')">Register</button>            
-            </form>
-            <div class="login-with-container">
-                <hr>
-                <p>Or Login With</p>
-                <hr>
+        <div class="close" id="close-btn" onclick="modals('register-modal', 'close-btn')">&times;</div>
+        <p id="bold">Create New Account</p>
+        <p id="text">Please enter details</p>
+        <form action="">
+            <label for="name">Name</label>
+            <br>
+            <input type="text" placeholder="Kristin Watson" id="name" class="input">
+            <label for="email">Email Address</label>
+            <br>
+            <input type="email" placeholder="kristin.watson@example.com" id="email" class="input">
+            <br><br>
+            <label for="password">Password</label><br>
+            <input type="password" placeholder="••••••••••••••••••" id="password" class="input">
+            <br><br>
+            
+            <div class="checkbox agree">
+                <label for="remmember">I agree to the Terms & Conditions</label><br>
+                <input type="checkbox">
             </div>
-            <div class="btn-container">
-                <button type="button" class="btn"><img src="icons/google.png" alt="google" id="icon">Login with Google</button>
-                <button type="button" class="btn"><img src="icons/apple.png" alt="Apple" id="icon">Login with Apple</button>
-            </div>
+            <button type="button" class="blue" id="otp-btn" onclick="modals('otp-modal', 'otp-btn')">Register</button>            
+        </form>
+        <div class="login-with-container">
+            <hr>
+            <p>Or Login With</p>
+            <hr>
         </div>
-    </div>  
-    
-    <!-- otp-page -->
-    <div id="otp-modal" class="modal modal-structure">
-        <div class="modal-container">
-            <div class="close" id="close-btn" onclick="modals('otp-modal', 'close-btn')">&times;</div>
-            <p id="bold">Enter OTP</p>
-            <p id="text">We have share a code of your registered email address kristin.watson@example.com</p>
-            <div class="code">
-                <div class="digit">3</div>
-                <div class="digit">1</div>
-                <div class="digit black"></div>
-                <div class="digit black"></div>
-                <div class="digit black"></div>
-            </div>
-            <form action="">
-                <button type="button" class="blue" id="Successfull-btn" onclick="modals('Successfull-modal', 'Successfull-btn')">Send OTP</button>            
-            </form>
+        <div class="btn-container">
+            <button type="button" class="btn"><img src="icons/google.png" alt="google" id="icon">Login with Google</button>
+            <button type="button" class="btn"><img src="icons/apple.png" alt="Apple" id="icon">Login with Apple</button>
         </div>
-    </div>  
+    </div>
+</div>  
 
-     <!-- successfull-page -->
-     <div id="Successfull-modal" class="modal modal-structure">
-        <div class="modal-container">
-            <div class="circles">
-                <div class="first"><div class="second"><div class="third"><img src="icons/search 4.png" alt=""></div></div></div>  
-            </div>
-            <p id="bold">Password Changed Successfully</p>
-            <p id="text">Your password has been updated successfully</p>
-            <form action="">
-                <button type="button" class="blue" onclick="modals('log-in-modal', 'log-in-btn')">Back to Login</button>            
-            </form>
+<!-- otp-page -->
+<div id="otp-modal" class="modal modal-structure">
+    <div class="modal-container">
+        <div class="close" id="close-btn" onclick="modals('otp-modal', 'close-btn')">&times;</div>
+        <p id="bold">Enter OTP</p>
+        <p id="text">We have share a code of your registered email address kristin.watson@example.com</p>
+        <div class="code">
+            <div class="digit">3</div>
+            <div class="digit">1</div>
+            <div class="digit black"></div>
+            <div class="digit black"></div>
+            <div class="digit black"></div>
         </div>
-    </div>  
+        <form action="">
+            <button type="button" class="blue" id="Successfull-btn" onclick="modals('Successfull-modal', 'Successfull-btn')">Send OTP</button>            
+        </form>
+    </div>
+</div>  
 
-    <!-- cart-page -->
-    <div id="cart-modal" class="modal">
-        <!-- <div class="content cart"> -->
-            <div class="modal-container">
-                <p id="black">You have <span class="bold">2 items</span> in your cart</p>
-                <div class="item-container">
-                    <div class="item">
-                        <div class="pic">
-                            <img src="images/image 16 (1).png" alt="">
-                        </div>
-                        <div class="details">
-                            <p>Apple iPhone 14 Pro</p>
-                            <p class="price">$1999.00</p>
-                            <div class="icon-text">
-                                <p>QTY: 1</p>
-                                <img src="icons/delete.png" alt="delete" id="delete">
-                            </div>
+    <!-- successfull-page -->
+    <div id="Successfull-modal" class="modal modal-structure">
+    <div class="modal-container">
+        <div class="circles">
+            <div class="first"><div class="second"><div class="third"><img src="icons/search 4.png" alt=""></div></div></div>  
+        </div>
+        <p id="bold">Password Changed Successfully</p>
+        <p id="text">Your password has been updated successfully</p>
+        <form action="">
+            <button type="button" class="blue" id="back-login-btn" onclick="modals('log-in-modal', 'log-in-btn')">Back to Login</button>            
+        </form>
+    </div>
+</div>  
+
+<!-- cart-page -->
+<div id="cart-modal" class="modal">
+        <div class="modal-container">
+            <p id="black">You have <span class="bold">2 items</span> in your cart</p>
+            <div class="item-container">
+                <div class="item">
+                    <div class="pic">
+                        <img src="images/image 16 (1).png" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Apple iPhone 14 Pro</p>
+                        <p class="price">$1999.00</p>
+                        <div class="icon-text">
+                            <p>QTY: 1</p>
+                            <img src="icons/delete.png" alt="delete" id="delete">
                         </div>
                     </div>
-                    <hr>
-                    <div class="item">
-                        <div class="pic">
-                            <img src="images/image 25.png" alt="">
-                        </div>
-                        <div class="details">
-                            <p>Asus ROG Delta S</p>
-                            <p class="price">$250.00</p>
-                            <div class="icon-text">
-                                <p>QTY: 1</p>
-                                <img src="icons/delete.png" alt="delete" id="delete">
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="total">
-                        <p>Subtotal</p>
-                        <p>$2249.00</p>
-                    </div>
-                    <button type="button" class="blue gray">View Cart</button>
-                    <button type="button" class="blue">Checkout</button> 
                 </div>
+                <hr>
+                <div class="item">
+                    <div class="pic">
+                        <img src="images/image 25.png" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Asus ROG Delta S</p>
+                        <p class="price">$250.00</p>
+                        <div class="icon-text">
+                            <p>QTY: 1</p>
+                            <img src="icons/delete.png" alt="delete" id="delete">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="total">
+                    <p>Subtotal</p>
+                    <p>$2249.00</p>
+                </div>
+                <button type="button" class="blue gray">View Cart</button>
+                <button type="button" class="blue">Checkout</button> 
             </div>
-        <!-- </div> -->
+        </div>
     </div>  
     <script src="myjs.js"></script>
 </body>

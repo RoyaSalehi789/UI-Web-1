@@ -151,10 +151,11 @@ body {
     margin-left: -20px;
 }
 .main-nav #all-categories {
+    width: 100%;
     border-style: none;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
-    background-color: inherit;
+    background: none;
 }
 .main-nav .container {
     width: 285px;
@@ -309,9 +310,6 @@ body {
     padding: 10px;
     margin-top: 5px;
     background-color: #A5A9AC0D;
-}
-.product-detail .container img:hover {
-    background-color: #FC4D42;
 }
 .product-detail .social {
     display: flex;
@@ -669,7 +667,7 @@ body {
     gap: 20px;
     margin: auto;
 }
-/* cart-modal */
+/* log-in-modal */
 .modal {
     display: none;
     position: fixed;
@@ -684,7 +682,7 @@ body {
   }
 .close {
     color: black;
-    /* float: right; */
+    float: right;
     font-size: 20px;
     background-color: white;
     width: 34px;
@@ -693,27 +691,32 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    position: relative;
+    position: absolute;
     cursor: pointer;
+    top: 0;
+    left: 100%;
+    transform: translate(-100%, -120%);
 }
-.modal-structure .content .modal-container {
+.modal-structure .modal-container {
     width: 420px;
     background-color: white;
     border-radius: 16px;
-    margin-top: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
-.modal-structure .content {
-    display: flex;
-    align-items: center;
-}
-#cart-modal .content .modal-container {
+  
+#cart-modal .modal-container {
     width: 352px;
     height: 1024px;
     background-color: white;
-}
-.modal .content {
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(-100%);
+    z-index: 1000;
 }
 .modal-container #bold {
     font-size: 30px;
@@ -903,6 +906,9 @@ input[type="checkbox"] {
 .code .black {
     border: #A5A9AC33 solid 1px;
 }
+#otp-modal button {
+    margin-top: 20px;
+}
 .circles {
     width: 108px;
     margin: auto;
@@ -949,10 +955,13 @@ input[type="checkbox"] {
     text-align: center;
     color: black;
     line-height: 30px;
-    margin: 15px 0px 0px 0px;
+    margin: 15px auto 0px auto;
 }
-#back-login-btn, #Successfull-btn {
+#Successfull-btn {
     margin-bottom: 20px;
+}
+#back-login-btn {
+    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 640px){
