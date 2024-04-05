@@ -19,15 +19,18 @@
                     <select name="all" id="all" class="button back">
                         <option value="all">All</option>
                     </select>
-                    <input type="search" id="search" class="button back" placeholder="Search">
+                    <div class="button" id="search-bar">
+                        <img src="icons/search 02.png" alt="">
+                        <input type="search" id="search-inp" class="back" placeholder="Search">
+                    </div>
                     <button class="button blue" type="submit">search</button> 
                 </div> 
                 <div class="container">
                     <div class="icon-container">
                     <img src="icons/search 02.png" alt="search" class="search-icon">
                     <img src="icons/Vector.png" alt="heart" class="heart-icon">
-                    <img src="icons/cart.png" alt="" class="cart-icon">
-                    <img src="icons/Cart Item.png" alt="item" class="item-icon">
+                    <img src="icons/cart.png" alt="" id="cart-btn" class="cart-icon" onclick="modals('cart-modal', 'cart-btn')">
+                    <img src="icons/Cart Item.png" alt="item" class="item-icon" >
                     </div>
                     <button type="button" id="log-in-btn" class="blue" onclick="modals('log-in-modal', 'log-in-btn')">Login</button>
                 </div>
@@ -36,9 +39,12 @@
             <br>
             <div class="main-nav">
                 <ul>
-                    <li><select name="categories" id="all-categories">
+                    <li class="category-bar">
+                        <img src="icons/menu-line-horizontal.png" alt="">
+                        <select name="categories" id="all-categories">
                         <option value="categories">All Categories</option>
-                    </select></li>
+                        </select>
+                    </li>
                     <div class="nav-item">
                         <li><a href="" >Home</a></li>
                         <li><select name="Shop" id="shop">
@@ -96,45 +102,27 @@
 
         <div class="cat-container">
             <div class="item">
-                <div class="pic">
-                    <img src="images/Ellipse 1201.png" alt="" id="circle-1">
-                    <img src="images/image 9.png" alt="" id="img">
-                </div>
+                <img src="images/image 9.png" alt="" id="img">
                 <p class="text">Mobile Phones</p>
             </div>
             <div class="item">
-                <div class="pic">
-                    <img src="images/Ellipse 1201.png" alt="" id="circle-1">
-                    <img src="images/image 11.png" alt="" id="img">
-                </div>
+                <img src="images/image 11.png" alt="" id="img">
                 <p class="text">Smart TV</p>
             </div>
             <div class="item">
-                <div class="pic">
-                    <img src="images/Ellipse 1201.png" alt="" id="circle-1">
-                    <img src="images/image 13.png" alt="" id="img">
-                </div>
+                <img src="images/image 13.png" alt="" id="img">
                 <p class="text">Smart Watch</p>
             </div>
             <div class="item">
-                <div class="pic">
-                    <img src="images/Ellipse 1201.png" alt="" id="circle-1">
-                    <img src="images/image 10.png" alt="" id="img">
-                </div>
+                <img src="images/image 10.png" alt="" id="img">
                 <p class="text">Laptops</p>
             </div>
             <div class="item">
-                <div class="pic">
-                    <img src="images/Ellipse 1201.png" alt="" id="circle-1">
-                    <img src="images/image 14.png" alt="" id="img">
-                </div>
+                <img src="images/image 14.png" alt="" id="img">
                 <p class="text">Drones</p>
             </div>
             <div class="item">
-                <div class="pic">
-                    <img src="images/Ellipse 1201.png" alt="" id="circle-1">
-                    <img src="images/image 12.png" alt="" id="img">
-                </div>
+                <img src="images/image 12.png" alt="" id="img">
                 <p class="text">Headphones</p>
             </div>      
         </div>
@@ -416,25 +404,23 @@
         </div>
     </section>
 
+    
     <section class="icon-box">
         <div class="icon-item">
             <img src="icons/fast delivery.png" alt="Free Shipping" class="icon">
             <h3 id="topic">Free Shipping</h3>
             <p id="content">Free shipping for order above $150</p>
         </div>
-
         <div class="icon-item">
             <img src="icons/package box 8.png" alt="Money Guarantee" class="icon">
             <h3 id="topic">Money Guarantee</h3>
             <p id="content">Within 30 days for an exchange</p>
         </div>
-
         <div class="icon-item">
             <img src="icons/package box 9.png" alt="Online Support" class="icon">
             <h3 id="topic">Online Support</h3>
             <p id="content">24 hours a day, 7 days a week</p>
         </div>
-
         <div class="icon-item">
             <img src="icons/package box 10.png" alt="Flexible Payment" class="icon">
             <h3 id="topic">Flexible Payment</h3>
@@ -531,119 +517,155 @@
     </section>
 
     <!-- log-in-page -->
-    <div id="log-in-modal" class="modal">
-        <div class="content">
-            <span class="close">&times;</span>
-            <div class="modal-container">
-                <p id="bold">Welcome 👋 </p>
-                <p id="text">Please login here</p>
-                <form action="">
-                    <label for="email">Email Address</label>
-                    <br>
-                    <input type="email" placeholder="kristin.watson@example.com" id="email" class="input">
-                    <br><br>
-                    <label for="password">Password</label><br>
-                    <input type="password" placeholder="••••••••••••••••••" id="password" class="input">
-                    <br><br>
-                    
-                    <div class="remmeber-container">
-                        <div class="checkbox">
-                            <label for="remmember">Remember Me</label><br>
-                            <input type="checkbox">
-                        </div>
-                        <p>Forgot Password?</p>
+    <div id="log-in-modal" class="modal modal-structure">
+        <div class="modal-container">
+            <div class="close" id="close-btn" onclick="modals('log-in-modal', 'close-btn')">&times;</div>
+            <p id="bold">Welcome 👋 </p>
+            <p id="text">Please login here</p>
+            <form action="">
+                <label for="email">Email Address</label>
+                <br>
+                <input type="email" placeholder="kristin.watson@example.com" id="email" class="input">
+                <br><br>
+                <label for="password">Password</label><br>
+                <input type="password" placeholder="••••••••••••••••••" id="password" class="input">
+                <br><br>
+                
+                <div class="remmeber-container">
+                    <div class="checkbox">
+                        <label for="remmember">Remember Me</label><br>
+                        <input type="checkbox">
                     </div>
+                    <p>Forgot Password?</p>
+                </div>
 
-                    <button type="button" class="blue">Login</button>
-                    <button type="button" class="blue" id="register-btn" onclick="modals('register-modal', 'register-btn')">Register</button>           
-                </form>
-                <div class="login-with-container">
-                    <hr>
-                    <p>Or Login With</p>
-                    <hr>
-                </div>
-                <div class="btn-container">
-                    <button type="button" class="btn"><img src="icons/google.png" alt="google" id="icon">Login with Google</button>
-                    <button type="button" class="btn"><img src="icons/apple.png" alt="Apple" id="icon">Login with Apple</button>
-                </div>
+                <button type="button" class="blue">Login</button>
+                <button type="button" class="blue" id="register-btn" onclick="modals('register-modal', 'register-btn')">Register</button>           
+            </form>
+            <div class="login-with-container">
+                <hr>
+                <p>Or Login With</p>
+                <hr>
+            </div>
+            <div class="btn-container">
+                <button type="button" class="btn"><img src="icons/google.png" alt="google" id="icon">Login with Google</button>
+                <button type="button" class="btn"><img src="icons/apple.png" alt="Apple" id="icon">Login with Apple</button>
             </div>
         </div>
     </div>
 
     <!-- register-page -->
-    <div id="register-modal" class="modal">
-        <div class="content">
-            <span class="close">&times;</span>
-            <div class="modal-container">
-                <p id="bold">Create New Account</p>
-                <p id="text">Please enter details</p>
-                <form action="">
-                    <label for="name">Name</label>
-                    <br>
-                    <input type="text" placeholder="Kristin Watson" id="name" class="input">
-                    <label for="email">Email Address</label>
-                    <br>
-                    <input type="email" placeholder="kristin.watson@example.com" id="email" class="input">
-                    <br><br>
-                    <label for="password">Password</label><br>
-                    <input type="password" placeholder="••••••••••••••••••" id="password" class="input">
-                    <br><br>
-                    
-                    <div class="checkbox agree">
-                        <label for="remmember">I agree to the Terms & Conditions</label><br>
-                        <input type="checkbox">
-                    </div>
-                    <button type="button" class="blue" id="otp-btn" onclick="modals('otp-modal', 'otp-btn')">Register</button>            
-                </form>
-                <div class="login-with-container">
-                    <hr>
-                    <p>Or Login With</p>
-                    <hr>
+    <div id="register-modal" class="modal modal-structure">
+        <div class="modal-container">
+            <div class="close" id="close-btn" onclick="modals('register-modal', 'close-btn')">&times;</div>
+            <p id="bold">Create New Account</p>
+            <p id="text">Please enter details</p>
+            <form action="">
+                <label for="name">Name</label>
+                <br>
+                <input type="text" placeholder="Kristin Watson" id="name" class="input">
+                <label for="email">Email Address</label>
+                <br>
+                <input type="email" placeholder="kristin.watson@example.com" id="email" class="input">
+                <br><br>
+                <label for="password">Password</label><br>
+                <input type="password" placeholder="••••••••••••••••••" id="password" class="input">
+                <br><br>
+                
+                <div class="checkbox agree">
+                    <label for="remmember">I agree to the Terms & Conditions</label><br>
+                    <input type="checkbox">
                 </div>
-                <div class="btn-container">
-                    <button type="button" class="btn"><img src="icons/google.png" alt="google" id="icon">Login with Google</button>
-                    <button type="button" class="btn"><img src="icons/apple.png" alt="Apple" id="icon">Login with Apple</button>
-                </div>
+                <button type="button" class="blue" id="otp-btn" onclick="modals('otp-modal', 'otp-btn')">Register</button>            
+            </form>
+            <div class="login-with-container">
+                <hr>
+                <p>Or Login With</p>
+                <hr>
+            </div>
+            <div class="btn-container">
+                <button type="button" class="btn"><img src="icons/google.png" alt="google" id="icon">Login with Google</button>
+                <button type="button" class="btn"><img src="icons/apple.png" alt="Apple" id="icon">Login with Apple</button>
             </div>
         </div>
     </div>  
     
     <!-- otp-page -->
-    <div id="otp-modal" class="modal">
-        <div class="content">
-            <span class="close">&times;</span>
-            <div class="modal-container">
-                <p id="bold">Enter OTP</p>
-                <p id="text">We have share a code of your registered email address kristin.watson@example.com</p>
-                <div class="code">
-                    <div class="digit">3</div>
-                    <div class="digit">1</div>
-                    <div class="digit black"></div>
-                    <div class="digit black"></div>
-                    <div class="digit black"></div>
-                </div>
-                <form action="">
-                    <button type="button" class="blue" id="Successfull-btn" onclick="modals('Successfull-modal', 'Successfull-btn')">Send OTP</button>            
-                </form>
+    <div id="otp-modal" class="modal modal-structure">
+        <div class="modal-container">
+            <div class="close" id="close-btn" onclick="modals('otp-modal', 'close-btn')">&times;</div>
+            <p id="bold">Enter OTP</p>
+            <p id="text">We have share a code of your registered email address kristin.watson@example.com</p>
+            <div class="code">
+                <div class="digit">3</div>
+                <div class="digit">1</div>
+                <div class="digit black"></div>
+                <div class="digit black"></div>
+                <div class="digit black"></div>
             </div>
+            <form action="">
+                <button type="button" class="blue" id="Successfull-btn" onclick="modals('Successfull-modal', 'Successfull-btn')">Send OTP</button>            
+            </form>
         </div>
     </div>  
 
      <!-- successfull-page -->
-     <div id="Successfull-modal" class="modal">
-        <div class="content">
-            <span class="close">&times;</span>
-            <div class="modal-container">
-                <div class="circles">
-                    <div class="first"><div class="second"><div class="third"><img src="icons/search 4.png" alt=""></div></div></div>  
-                </div>
-                <p id="bold">Password Changed Successfully</p>
-                <p id="text">Your password has been updated successfully</p>
-                <form action="">
-                    <button type="button" class="blue" id="back-login-btn" onclick="modals('Successfull-modal', 'Successfull-btn')">Back to Login</button>            
-                </form>
+     <div id="Successfull-modal" class="modal modal-structure">
+        <div class="modal-container">
+            <div class="circles">
+                <div class="first"><div class="second"><div class="third"><img src="icons/search 4.png" alt=""></div></div></div>  
             </div>
+            <p id="bold">Password Changed Successfully</p>
+            <p id="text">Your password has been updated successfully</p>
+            <form action="">
+                <button type="button" class="blue" onclick="modals('log-in-modal', 'log-in-btn')">Back to Login</button>            
+            </form>
         </div>
+    </div>  
+
+    <!-- cart-page -->
+    <div id="cart-modal" class="modal">
+        <!-- <div class="content cart"> -->
+            <div class="modal-container">
+                <p id="black">You have <span class="bold">2 items</span> in your cart</p>
+                <div class="item-container">
+                    <div class="item">
+                        <div class="pic">
+                            <img src="images/image 16 (1).png" alt="">
+                        </div>
+                        <div class="details">
+                            <p>Apple iPhone 14 Pro</p>
+                            <p class="price">$1999.00</p>
+                            <div class="icon-text">
+                                <p>QTY: 1</p>
+                                <img src="icons/delete.png" alt="delete" id="delete">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="item">
+                        <div class="pic">
+                            <img src="images/image 25.png" alt="">
+                        </div>
+                        <div class="details">
+                            <p>Asus ROG Delta S</p>
+                            <p class="price">$250.00</p>
+                            <div class="icon-text">
+                                <p>QTY: 1</p>
+                                <img src="icons/delete.png" alt="delete" id="delete">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="total">
+                        <p>Subtotal</p>
+                        <p>$2249.00</p>
+                    </div>
+                    <button type="button" class="blue gray">View Cart</button>
+                    <button type="button" class="blue">Checkout</button> 
+                </div>
+            </div>
+        <!-- </div> -->
     </div>  
     <script src="myjs.js"></script>
 </body>
