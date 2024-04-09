@@ -113,11 +113,20 @@ body {
     height: 22px;
     cursor: pointer;
 } 
-.header .item-icon {
+.header .container .cart-num {
     width: 16px;
     height: 16px;
     margin-left: -27px;
     margin-top: -5px;
+    background-color: #1C4E8E;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 11px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* main-nav */
@@ -254,17 +263,21 @@ body {
     display: flex;
     gap: 10px;
 }
-.detail-box .color #gray {
+.detail-box .color #gray-color {
     background-color: #BEBEC6;
+    cursor: pointer;
 }
-.detail-box .color #blue {
+.detail-box .color #blue-color {
     background-color: #304FBE;
+    cursor: pointer;
 }
-.detail-box .color #black {
+.detail-box .color #black-color {
     background-color: #101316;
+    cursor: pointer;
 }
-.detail-box .color #purple {
+.detail-box .color #purple-color {
     background-color: #5D30BE;
+    cursor: pointer;
 }
 .group-input {
     display: flex;
@@ -326,8 +339,8 @@ body {
 .pic-container {
     display: grid;
     grid-template-columns: repeat(4, 123px);
-    gap: 20px;
-    margin-top: 50px;
+    gap: 10px;
+    margin-top: 20px;
 }
 .pic-container .bottom-pic {
     width: 70.81px;
@@ -709,13 +722,15 @@ body {
   
 #cart-modal .modal-container {
     width: 352px;
-    height: 1024px;
+    height: 100vh;
     background-color: white;
     position: absolute;
     top: 0;
     left: 100%;
     transform: translateX(-100%);
-    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .modal-container #bold {
     font-size: 30px;
@@ -744,8 +759,7 @@ body {
 }
 .item-container {
     width: 312px;
-    height: 202px;
-    margin: auto;
+    margin: 0 auto;
 }
 .item-container .item {
     width: 312px;
@@ -770,12 +784,11 @@ body {
     height: 16.67px;
     cursor: pointer;
 }
-.item-container .total {
+.total {
     display: flex;
     font-size: 16px;
     font-weight: 700;
     justify-content: space-between;
-    margin-top: 470px;
 }
 .modal-container .bold {
     font-weight: 700;
@@ -792,6 +805,10 @@ body {
     width: 312px;
     margin: auto;
     margin-top: 20px;
+}
+.total-button {
+    width: 312px;
+    margin: 0 auto;
 }
 #cart-modal button {
     width: 312px;
