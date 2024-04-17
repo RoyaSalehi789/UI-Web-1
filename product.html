@@ -27,7 +27,7 @@
                 <img src="icons/search 02.png" alt="search" class="search-icon">
                 <img src="icons/Vector.png" alt="heart" class="heart-icon">
                 <img src="icons/cart.png" alt="" id="cart-btn" class="cart-icon" onclick="modals('cart-modal', 'cart-btn')">
-                <div class="cart-num">2</div>
+                <div id="cart-num">2</div>
                 </div>
                 <button type="button" id="log-in-btn" class="blue" onclick="modals('log-in-modal', 'log-in-btn')">Login</button>
             </div>
@@ -96,7 +96,7 @@
                         <p class="button" id="product-counter">1</p>
                         <button type="button" class="button plus" is="plus" onclick="plusMinus('plus')"><img src="icons/plus.png" alt="+"></button>
                     </div>
-                    <button type="button" class="blue">Add to Cart</button>
+                    <button type="button" class="blue add-to-cart" onclick="addToCart()">Add to Cart</button>
                     <img src="icons/heart.png" alt="favorite">
                 </div>
                 <div class="share-box">
@@ -218,25 +218,35 @@
                     <div class="form">
                         <p id="topic">Your Rating</p>
                         <div class="rating">
-                            <img src="icons/star.png" alt="star">
+                            <div class="1star star" onclick="scoring(0)">
+                                <img src="icons/star.png" alt="star">   
+                            </div>
                             <hr>
-                            <img src="icons/star.png" alt="star">
-                            <img src="icons/star.png" alt="star">
+                            <div class="2star star" onclick="scoring(1)">
+                                <img src="icons/star.png" alt="star">
+                                <img src="icons/star.png" alt="star">  
+                            </div>
                             <hr>
-                            <img src="icons/star.png" alt="star">
-                            <img src="icons/star.png" alt="star">
-                            <img src="icons/star.png" alt="star">
+                            <div class="3star star" onclick="scoring(2)">
+                                <img src="icons/star.png" alt="star">
+                                <img src="icons/star.png" alt="star">
+                                <img src="icons/star.png" alt="star">
+                            </div>
                             <hr>
-                            <img src="icons/star.png" alt="star">
-                            <img src="icons/star.png" alt="star">
-                            <img src="icons/star.png" alt="star">
-                            <img src="icons/star.png" alt="star">
+                            <div class="4star star" onclick="scoring(3)">
+                                <img src="icons/star.png" alt="star">
+                                <img src="icons/star.png" alt="star">
+                                <img src="icons/star.png" alt="star">
+                                <img src="icons/star.png" alt="star">
+                            </div>
                             <hr>
-                            <img src="icons/star.png" alt="star">
-                            <img src="icons/star.png" alt="star">
-                            <img src="icons/star.png" alt="star">
-                            <img src="icons/star.png" alt="star">
-                            <img src="icons/star.png" alt="star">
+                            <div class="5star star" onclick="scoring(4)">
+                                <img src="icons/star.png" alt="star">
+                                <img src="icons/star.png" alt="star">
+                                <img src="icons/star.png" alt="star">
+                                <img src="icons/star.png" alt="star">
+                                <img src="icons/star.png" alt="star">
+                            </div>
                         </div>
                         <form action="">
                             <label for="name">Name</label>
@@ -416,7 +426,7 @@
         <div class="content cart">
             <div class="modal-container">
                 <div class="item-container">
-                    <p id="black">You have <span class="bold">2 items</span> in your cart</p>
+                    <p id="black">You have <span class="bold" id="item-cart-count-text">2 items</span> in your cart</p>
                     <div class="items">
                         <div class="item">
                             <div class="pic">
@@ -426,8 +436,8 @@
                                 <p>Apple iPhone 14 Pro</p>
                                 <p class="price">$1999.00</p>
                                 <div class="icon-text">
-                                    <p id="item1">QTY: 1</p>
-                                    <img src="icons/delete.png" alt="delete" id="delete">
+                                    <p class="price-item-cart">QTY: 1</p>
+                                    <img src="icons/delete.png" alt="delete" class="delete" onclick="deleteItemCart(0)">
                                 </div>
                             </div>
                         </div>
@@ -440,8 +450,8 @@
                                 <p>Asus ROG Delta S</p>
                                 <p class="price">$250.00</p>
                                 <div class="icon-text">
-                                    <p id="item2">QTY: 1</p>
-                                    <img src="icons/delete.png" alt="delete" id="delete">
+                                    <p class="price-item-cart">QTY: 1</p>
+                                    <img src="icons/delete.png" alt="delete" class="delete" onclick="deleteItemCart(1)">
                                 </div>
                             </div>
                         </div>
@@ -577,7 +587,7 @@
 <!-- cart-page -->
 <div id="cart-modal" class="modal">
         <div class="modal-container">
-            <p id="black">You have <span class="bold">2 items</span> in your cart</p>
+            <p id="black" class="item-number-text">You have <span class="bold">2 items</span> in your cart</p>
             <div class="item-container">
                 <div class="item">
                     <div class="pic">

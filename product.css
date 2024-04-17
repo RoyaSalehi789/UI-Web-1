@@ -113,7 +113,7 @@ body {
     height: 22px;
     cursor: pointer;
 } 
-.header .container .cart-num {
+.header .container #cart-num {
     width: 16px;
     height: 16px;
     margin-left: -27px;
@@ -454,7 +454,7 @@ body {
     margin-top: 20px;
 }
 .your-review .rating {
-    width: 384px;
+    width: 410px;
     height: 20px;
     display: flex;
 }
@@ -463,6 +463,9 @@ body {
     height: 20px;
     position: relative;
     top: -5px;
+}
+.your-review .star {
+    cursor: pointer;
 }
 .your-review .form #topic {
     font-size: 16px;
@@ -779,7 +782,7 @@ body {
 .modal-container .details .price {
     font-weight: 700;
 }
-.modal-container #delete {
+.modal-container .delete {
     width: 15px;
     height: 16.67px;
     cursor: pointer;
