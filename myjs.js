@@ -156,16 +156,24 @@ function deleteItemCart(index) {
 }
 
 //scoring
+var score;
 function scoring(index) {
-  console.log("Your Rating: " + `${index + 1}`);
+  score = index + 1;
+  var name = document.getElementById("form-name").value;
   var starBox = document.getElementsByClassName("star")[index];
   var stars = starBox.getElementsByTagName("img");
   var allStars = document.getElementsByClassName("rating")[0].getElementsByTagName("img");
 
+  //to inactive the latest score
   for (var j = 0 ; j < allStars.length ; j++) {
     allStars[j].src = "icons/star.png";
   }
+  //to active the new score
   for (var j = 0 ; j < stars.length ; j++) {
     stars[j].src = 'icons/Star 2.png';
   }
+}
+function ratingForm(){
+  var name = document.getElementById("form-name").value;
+  console.log(`${name}, Your Rating is registered: ${score} star`);
 }

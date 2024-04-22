@@ -116,7 +116,7 @@ body {
     height: 22px;
     cursor: pointer;
 } 
-.header .container .cart-num {
+.header .container #cart-num {
     width: 16px;
     height: 16px;
     margin-left: -27px;
@@ -398,6 +398,12 @@ body {
 .off-item .container {
     display: flex;
     gap: 30px;
+}
+.off-item .container a {
+    text-decoration: none;
+    color: white;
+    padding-right: 5px;
+
 }
 .off-item .percent {
     width: 74px;
@@ -859,7 +865,7 @@ body {
 .modal-container .details .price {
     font-weight: 700;
 }
-.modal-container #delete {
+.modal-container .delete {
     width: 15px;
     height: 16.67px;
     cursor: pointer;

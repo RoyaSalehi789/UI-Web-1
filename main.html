@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Electro</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="icons/pngtree-digital-shop-logo-png-image_5886226.jpg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
  rel="stylesheet">
@@ -30,7 +31,7 @@
                     <img src="icons/search 02.png" alt="search" class="search-icon">
                     <img src="icons/Vector.png" alt="heart" class="heart-icon">
                     <img src="icons/cart.png" alt="" id="cart-btn" class="cart-icon" onclick="modals('cart-modal', 'cart-btn')">
-                    <div class="cart-num">2</div>
+                    <div id="cart-num">2</div>
                     </div>
                     <button type="button" id="log-in-btn" class="blue" onclick="modals('log-in-modal', 'log-in-btn')">Login</button>
                 </div>
@@ -151,7 +152,7 @@
                 <div class="detail">
                     <h3 id="name">Iphone 14 Pro</h3>
                     <p id="text">Don’t miss the last opportunity </p>
-                    <button class="blue">Shop Now <img src="icons/arrow right.png" alt="" id="shop-icon"></button>
+                    <button class="blue"><a href="product.html">Shop Now</a><img src="icons/arrow right.png" alt="" id="shop-icon"></button>
                 </div>
                 <img src="images/image 16.png" alt="" id="img-iphone">
             </div>
@@ -635,7 +636,7 @@
     <div class="content cart">
         <div class="modal-container">
             <div class="item-container">
-                <p id="black">You have <span class="bold">2 items</span> in your cart</p>
+                <p id="black">You have <span class="bold" id="item-cart-count-text">2 items</span> in your cart</p>
                 <div class="items">
                     <div class="item">
                         <div class="pic">
@@ -645,8 +646,8 @@
                             <p>Apple iPhone 14 Pro</p>
                             <p class="price">$1999.00</p>
                             <div class="icon-text">
-                                <p>QTY: 1</p>
-                                <img src="icons/delete.png" alt="delete" id="delete">
+                                <p class="price-item-cart">QTY: 1</p>
+                                <img src="icons/delete.png" alt="delete" class="delete" onclick="deleteItemCart(0)">
                             </div>
                         </div>
                     </div>
@@ -659,8 +660,8 @@
                             <p>Asus ROG Delta S</p>
                             <p class="price">$250.00</p>
                             <div class="icon-text">
-                                <p>QTY: 1</p>
-                                <img src="icons/delete.png" alt="delete" id="delete">
+                                <p class="price-item-cart">QTY: 1</p>
+                                <img src="icons/delete.png" alt="delete" class="delete" onclick="deleteItemCart(1)">
                             </div>
                         </div>
                     </div>
