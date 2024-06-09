@@ -1,0 +1,43 @@
+<!-- log-in-page -->
+<div id="log-in-modal" class="modal modal-structure">
+    <div class="modal-container">
+        <div class="close" id="close-btn">&times;</div>
+        <p id="bold">Welcome 👋 </p>
+        <p id="text">Please login here</p>
+
+        <form  method="post" action="{% url 'main_page' %}">
+            {% csrf_token %}
+
+            <label for="email">Email Address</label>
+            <br>
+{#            <input type="email" placeholder="kristin.watson@example.com" id="email" class="input">#}
+            {{ login_form.email }}
+            <br><br>
+            <label for="password">Password</label><br>
+{#            <input type="password" placeholder="••••••••••••••••••" id="password" class="input">#}
+            {{ login_form.password }}
+            <br><br>
+
+            <div class="remmeber-container">
+                <div class="checkbox">
+                    <label for="remmember">Remember Me</label><br>
+{#                    <input type="checkbox">#}
+                    {{ login_form.remember }}
+                </div>
+                <p>Forgot Password?</p>
+            </div>
+
+            <button type="submit" class="blue">Login</button>
+            <button type="button" class="blue" id="register-btn" onclick="modals('register-modal', 'register-btn')">Register</button>
+        </form>
+        <div class="login-with-container">
+            <hr>
+            <p>Or Login With</p>
+            <hr>
+        </div>
+        <div class="btn-container">
+            <button type="button" class="btn"><img src="/static/icons/google.png" alt="google" id="icon">Login with Google</button>
+            <button type="button" class="btn"><img src="/static/icons/apple.png" alt="Apple" id="icon">Login with Apple</button>
+        </div>
+    </div>
+</div>

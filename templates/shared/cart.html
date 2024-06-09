@@ -1,0 +1,48 @@
+<!-- cart-page -->
+<div id="cart-modal" class="modal">
+    <div class="content cart">
+        <div class="modal-container">
+            <div class="item-container">
+                <p id="black">You have <span class="bold" id="item-cart-count-text">2 items</span> in your cart</p>
+                <div class="items">
+                    <div class="item">
+                        <div class="pic">
+                            <img src="/static/images//image 16 (1).png" alt="">
+                        </div>
+                        <div class="details">
+                            <p>Apple iPhone 14 Pro</p>
+                            <p class="price">$1999.00</p>
+                            <div class="icon-text">
+                                <p class="price-item-cart">QTY: 1</p>
+                                <img src="/static/icons/delete.png" alt="delete" class="delete" onclick="deleteItemCart(0)">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="item">
+                        <div class="pic">
+                            <img src="/static/images//image 25.png" alt="">
+                        </div>
+                        <div class="details">
+                            <p>Asus ROG Delta S</p>
+                            <p class="price">$250.00</p>
+                            <div class="icon-text">
+                                <p class="price-item-cart">QTY: 1</p>
+                                <img src="/static/icons/delete.png" alt="delete" class="delete" onclick="deleteItemCart(1)">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="total-button">
+                <div class="total">
+                    <p>Subtotal</p>
+                    <p>$2249.00</p>
+                </div>
+                <button type="button" class="blue gray">View Cart</button>
+                <button type="button" class="blue">Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
