@@ -1,14 +1,29 @@
-from django.http import HttpRequest
+from django.http import Http404
 from django.shortcuts import render, redirect
-from django.utils.crypto import get_random_string
-from django.views import View
+from django.urls import reverse
 from accounts.models import User
-from main_module.forms import RegisterForm, LoginForm
+from .forms import RegisterForm, LoginForm
+from django.utils.crypto import get_random_string
 from django.contrib.auth import login, logout
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 
 
 def main_page(request):
     return render(request, 'main_module/main_page.html')
+
+
+def activate_account(request, email_active_code):
+    if request.method == 'GET':
+        user: User = User.objects.filter(email_active_code__exact=email_active_code).first()
+        if user is not None:
+            if not user.is_active:
+                user.is_active = True
+                user.email_active_code = get_random_string(72)
+                user.save()
+                return redirect(reverse('main_page'))
+        raise Http404
 
 
 def register(request):
@@ -24,9 +39,19 @@ def register(request):
             else:
                 new_user = User(email=user_email,
                                 username=user_name,
-                                email_active_code=get_random_string(72))
+                                email_active_code=get_random_string(72),
+                                is_active=False)
                 new_user.set_password(user_password)
                 new_user.save()
+                subject = 'activate account'
+                sender = 'mailtrap@demomailtrap.com'
+                to = [new_user.email]
+                context = {'user': new_user}
+                html_message = render_to_string("emails/activate_account.html", context)
+                plain_message = strip_tags(html_message)
+                email = EmailMultiAlternatives(subject, plain_message, sender, to)
+                email.attach_alternative(html_message, "text/html")
+                email.send()
 
         context = {
             'register_form': register_form
