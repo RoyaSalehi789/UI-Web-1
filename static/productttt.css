@@ -202,6 +202,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 42px 0 42px;
+}
+.detail-box .back img{
+    width: 450px;
+
 }
 .detail-box .star-text {
     width: 256px;
