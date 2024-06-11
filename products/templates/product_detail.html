@@ -1,0 +1,217 @@
+{% extends 'shared/main.html' %}
+{% load render_partial %}
+
+{% block main %}
+    <section class="product-detail">
+        <p id="path">Home <span><img src="/static/icons/direaction right.png" alt=""></span> Shop <span>
+            <img src="/static/icons/direaction right.png" alt=""></span> {{ product.name }}</p>
+        <div class="detail-box">
+            <div class="back">
+                <img src="/static/images/image 16 (1).png" alt="iphone-14-pro">
+            </div>
+            <div class="content">
+                <div class="iphone-stock">
+                    <h1 id="product-name">{{ product.name }}</h1>
+                    <p>In Stock</p>
+                </div>
+                <div class="star-text">
+                    <div class="stars">
+                        <img src="/static/icons/Star 2.png" alt="star">
+                        <img src="/static/icons/Star 2.png" alt="star">
+                        <img src="/static/icons/Star 2.png" alt="star">
+                        <img src="/static/icons/Star 2.png" alt="star">
+                        <img src="/static/icons/Star 2.png" alt="star">
+                    </div>
+                    <p>5.0 (121 Reviews)</p>
+                </div>
+                <p class="price" id="product-price">${{ product.price }}</p>
+                <p class="text">{{ product.description}}</p>
+
+                <div class="color">
+                    <p>Color</p>
+                    <div class="pallet">
+                        <div id="gray-color" class="color-rectangle" onclick="changePriceByColor('gray-color')"></div>
+                        <div id="blue-color" class="color-rectangle" onclick="changePriceByColor('blue-color')"></div>
+                        <div id="black-color" class="color-rectangle" onclick="changePriceByColor('black-color')"></div>
+                        <div id="purple-color" class="color-rectangle" onclick="changePriceByColor('purple-color')"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="group-input">
+                        <button type="button" class="button minus" id="minus" onclick="plusMinus('minus')"><img src="/static/icons/minus.png" alt="-"></button>
+                        <p class="button" id="product-counter">1</p>
+                        <button type="button" class="button plus" is="plus" onclick="plusMinus('plus')"><img src="/static/icons/plus.png" alt="+"></button>
+                    </div>
+                    <button type="button" class="blue add-to-cart" onclick="addToCart()">Add to Cart</button>
+                    <img src="/static/icons/heart.png" alt="favorite">
+                </div>
+                <div class="share-box">
+                    <p class="topic">Share</p>
+                </div>
+                <div class="social">
+                    <img src="/static/icons/facebook-black.png" alt="facebook">
+                    <img src="/static/icons/twitter-black.png" alt="x">
+                    <img src="/static/icons/instagram-black.png" alt="instagram">
+                </div>
+            </div>
+        </div>
+        <div class="pic-container">
+            <img src="/static/images/image 16 (1).png" alt="iphone-14-pro" class="bottom-pic">
+            <img src="/static/images/image 16 (1).png" alt="iphone-14-pro" class="bottom-pic">
+            <img src="/static/images/image 16 (1).png" alt="iphone-14-pro" class="bottom-pic">
+            <img src="/static/images/image 16 (1).png" alt="iphone-14-pro" class="bottom-pic">
+        </div>
+
+        <!-- Tab links -->
+        <div class="tabs">
+            <div class="tab">
+                <button class="tablinks active" onclick="switchTab(event, 'Descriptions')">Descriptions</button>
+                <button class="tablinks" onclick="switchTab(event, 'Additional')">Additional Information</button>
+                <button class="tablinks" onclick="switchTab(event, 'Reviews')">Reviews</button>
+            </div>
+            <hr>
+            <!-- Tab content -->
+            <div id="Descriptions" class="tabcontent active">
+                <p class="text">t is a long established fact that a reader will be distracted by the readable content of a page
+                    when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                     readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                     their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                     their infancy.
+                     <br><br><br>
+                    Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                    (injected humour and the like).</p>
+            </div>
+
+            <div id="Additional" class="tabcontent">
+                <div class="info-cols">
+                    <ul id="first">
+                        <li>Brand</li>
+                        <li>Item Height</li>
+                        <li>Item Width</li>
+                        <li>Screen Size</li>
+                        <li>Model Number</li>
+                        <li>RAM Size</li>
+                        <li>Operating System</li>
+                    </ul>
+
+                    <ul id="last">
+                        <li>{{ product.brand }}</li>
+                        <li>{{ product.item_height }} CM</li>
+                        <li>{{ product.item_width }}.4 CM</li>
+                        <li>{{ product.screen_size }} Inch</li>
+                        <li>{{ product.model_number }}</li>
+                        <li>{{ product.ram_size }} GB</li>
+                        <li>{{ product.operating_system }}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="Reviews" class="tabcontent">
+                <div class="comment">
+                    <h3>Customer Reviews</h3>
+                    <div class="comment-item">
+                        <div class="profile">
+                            <img src="/static/images/Ellipse 956@2x.png" alt="profile" id="img">
+                            <div class="name-star">
+                                <p>Mark Williams</p>
+                                <div class="stars">
+                                    <img src="/static/icons/Star 2.png" alt="star">
+                                    <img src="/static/icons/Star 2.png" alt="star">
+                                    <img src="/static/icons/Star 2.png" alt="star">
+                                    <img src="/static/icons/Star 2.png" alt="star">
+                                    <img src="/static/icons/Star 2.png" alt="star">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-content">
+                            <p id="short">Excellent Product, I Love It 😍</p>
+                            <p id="long">It is a long established fact that a reader will be distracted by the readable
+                                content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                that it has a more-or-less normal distribution of letters, as opposed to using
+                                'Content here, content here', making it look like readable English.</p>
+                            <p id="date"><span>Review by</span> Electro <span>Posted on</span> Sep 08, 2023</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="comment-item">
+                        <div class="profile">
+                            <img src="/static/images/Ellipse 957 (2).png" alt="profile" id="img">
+                            <div class="name-star">
+                                <p>Alexa Johnson</p>
+                                <div class="stars">
+                                    <img src="/static/icons/Star 2.png" alt="star">
+                                    <img src="/static/icons/Star 2.png" alt="star">
+                                    <img src="/static/icons/Star 2.png" alt="star">
+                                    <img src="/static/icons/Star 2.png" alt="star">
+                                    <img src="/static/icons/Star 2.png" alt="star">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-content">
+                            <p id="short">My Brother is very much happy with this iPhone</p>
+                            <p id="long">It is a long established fact that a reader will be distracted by the
+                                 readable content of a page when looking at its layout. The point of using Lorem
+                                 Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                                 using 'Content here, content here', making it look like readable English.</p>
+                            <p id="date"><span>Review by</span> Electro <span>Posted on</span> Sep 08, 2023</p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="your-review">
+                    <h3>Add your Review</h3>
+                    <div class="form">
+                        <p id="topic">Your Rating</p>
+                        <div class="rating">
+                            <div class="1star star" onclick="scoring(0)">
+                                <img src="/static/icons/star.png" alt="star">
+                            </div>
+                            <hr>
+                            <div class="2star star" onclick="scoring(1)">
+                                <img src="/static/icons/star.png" alt="star">
+                                <img src="/static/icons/star.png" alt="star">
+                            </div>
+                            <hr>
+                            <div class="3star star" onclick="scoring(2)">
+                                <img src="/static/icons/star.png" alt="star">
+                                <img src="/static/icons/star.png" alt="star">
+                                <img src="/static/icons/star.png" alt="star">
+                            </div>
+                            <hr>
+                            <div class="4star star" onclick="scoring(3)">
+                                <img src="/static/icons/star.png" alt="star">
+                                <img src="/static/icons/star.png" alt="star">
+                                <img src="/static/icons/star.png" alt="star">
+                                <img src="/static/icons/star.png" alt="star">
+                            </div>
+                            <hr>
+                            <div class="5star star" onclick="scoring(4)">
+                                <img src="/static/icons/star.png" alt="star">
+                                <img src="/static/icons/star.png" alt="star">
+                                <img src="/static/icons/star.png" alt="star">
+                                <img src="/static/icons/star.png" alt="star">
+                                <img src="/static/icons/star.png" alt="star">
+                            </div>
+                        </div>
+                        <form action="">
+                            <label for="name">Name</label>
+                            <br>
+                            <input type="text" id="form-name" placeholder="Enter Your Name">
+                            <br><br>
+                            <label for="email">Email Address</label>
+                            <br>
+                            <input type="email" id="email" placeholder="Enter Your Email">
+                            <br><br>
+                            <label for="recview">Your Review</label>
+                            <br>
+                            <textarea name="" id="recview" cols="30" rows="10" placeholder="Enter Your Review">                            </textarea>
+                            <button type="button" onclick="ratingForm()">Submit</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

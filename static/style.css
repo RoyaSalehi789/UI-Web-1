@@ -451,6 +451,10 @@ body {
 .detail .blue {
     width: 157px;
 }
+.detail a{
+    margin-top: 20px;
+    width: 300px;
+}
 
 /* bestseller */
 .bestseller {

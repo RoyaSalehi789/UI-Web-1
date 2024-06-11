@@ -11,3 +11,6 @@ class DiscountCode(models.Model):
     valid_to = models.DateTimeField()
     applicable_to_products = models.ManyToManyField(Product, blank=True)
     applicable_to_categories = models.ManyToManyField(Category, blank=True)
+
+    def __str__(self):
+        return self.code

@@ -1,5 +1,30 @@
 {% extends 'shared/main.html' %}
+{% load render_partial %}
 {% block main %}
+       <section class="headphone">
+            <img src="/static/images//_Group_.png" alt="" id="triangle" class="shape">
+            <img src="/static/images//_Path_.png" alt="" id="circle-1" class="shape">
+            <img src="/static/images//_Path_ (1).png" alt="" id="circle-2" class="shape">
+            <img src="/static/images//_Path_ (2).png" alt="" id="circle-3" class="shape">
+            <img src="/static/images//_Path_ (3).png" alt="" id="circle-4" class="shape">
+            <img src="/static/images//_Path_ (4).png" alt="" id="circle-5" class="shape">
+            <img src="/static/images//_Group_ (1).png" alt="" id="circle-6" class="shape">
+            <img src="/static/images//_Path_ (7).png" alt="" id="circle-10" class="shape">
+            <img src="/static/images//_Path_ (8).png" alt="" id="circle-7" class="shape">
+            <img src="/static/images//_Path_ (5).png" alt="" id="circle-8" class="shape">
+            <img src="/static/images//_Path_ (6).png" alt="" id="circle-9" class="shape">
+            <img src="/static/images//Ellipse 1200.png" alt="" id="circle" class="shape">
+            <div class="pic-text">
+                <div class="text-container">
+                    <p class="bold">Great Sound <br> With Solo <br> Headphone</p>
+                    <p class="text">It is a long established fact that a reader will be distracted by the readable
+                        content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+                    <button class="blue">Shop Now <img src="/static/icons/arrow right.png" alt="" id="shop-icon"></button>
+                </div>
+                <img src="/static/images//young-handsome-happy-smiling-man-dancing-listening-music-headphones-isolated-white-studio-wall 1.png" alt="" id="img">
+            </div>
+        </section>
+    </section>
         <!-- shop by categories -->
     <section class="categories-shop">
         <div class="topic-icons">
@@ -45,36 +70,7 @@
         </div>
     </section>
     <!-- off-box -->
-    <section class="off-box">
-        <div class="off-item">
-            <div class="percent">
-                <p id="percent-num">50% OFF</p>
-            </div>
-            <div class="container">
-                <div class="detail">
-                    <h3 id="name">Mackbook Air M2</h3>
-                    <p id="text">Don’t miss the last opportunity </p>
-                    <button class="blue">Shop Now <img src="/static/icons/arrow right.png" alt="" id="shop-icon"></button>
-                </div>
-                <img src="/static/images//image 15.png" alt="" id="img-laptop">
-            </div>
-        </div>
-
-        <div class="off-item">
-            <div class="percent">
-                <p id="percent-num">50% OFF</p>
-            </div>
-            <div class="container">
-                <div class="detail">
-                    <h3 id="name">Iphone 14 Pro</h3>
-                    <p id="text">Don’t miss the last opportunity </p>
-                    <button class="blue"><a href="product.html">Shop Now</a><img src="/static/icons/arrow right.png" alt="" id="shop-icon"></button>
-                </div>
-                <img src="/static/images//image 16.png" alt="" id="img-iphone">
-            </div>
-        </div>
-    </section>
-
+    {% render_partial 'products.views.off_product' %}
     <!-- bestseller -->
     <section class="bestseller">
         <div class="topic-container">

@@ -1,0 +1,21 @@
+{%block content %}
+    <section class="off-box">
+    {% for product in top_discounted_products %}
+        <div class="off-item">
+            <div class="percent">
+                <p id="percent-num">{{ product.discount_value }}% OFF</p>
+            </div>
+            <div class="container">
+                <div class="detail">
+                    <h3 id="name">{{ product.name }}</h3>
+                    <p id="text">Don’t miss the last opportunity </p>
+
+                    <button class="blue"><a href="{{ product.get_absolute_url }}">Shop Now</a>
+                        <img src="/static/icons/arrow%20right.png" alt="" id="shop-icon"></button>
+                </div>
+                <img src="/static/images//image 15.png" alt="" id="img-laptop">
+            </div>
+        </div>
+    {% endfor %}
+    </section>
+{% endblock %}
