@@ -1,0 +1,11 @@
+{% block content %}
+<section class="iphone-13">
+        <img src={{ image.image.url }} alt="" id="img">
+        <div class="text-box">
+            <h2 class="name">{{ product.name }}</h2>
+            <p class="content">Don’t miss the last opportunity </p>
+            <button class="blue"><a href="{{ product.get_absolute_url }}">Shop Now</a>
+                        <img src="/static/icons/arrow%20right.png" alt="" id="shop-icon"></button>
+        </div>
+    </section>
+{% endblock %}

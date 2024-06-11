@@ -25,7 +25,18 @@ def off_product(request):
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug)
     image = Image.objects.filter(product=product, title='detail-box').first()
+
     return render(request, 'product_detail.html', {
+        'product': product,
+        'image': image,
+    })
+
+
+def site_banner(request):
+    product = Product.objects.filter(set_as_banner=True).first()
+    image = Image.objects.filter(product=product, title='banner').first()
+
+    return render(request, 'banner.html', {
         'product': product,
         'image': image,
     })

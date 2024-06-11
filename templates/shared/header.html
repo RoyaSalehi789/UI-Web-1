@@ -13,13 +13,16 @@
                     <button class="button blue" type="submit">search</button>
                 </div>
                 <div class="container">
-                    <div class="icon-container">
-                    <img src="/static/icons/search 02.png" alt="search" class="search-icon">
-                    <img src="/static/icons/Vector.png" alt="heart" class="heart-icon">
-                    <img src="/static/icons/cart.png" alt="" id="cart-btn" class="cart-icon" onclick="modals('cart-modal', 'cart-btn')">
+                    {% if request.user.is_authenticated %}
+                        <div class="icon-container">
+                        <img src="/static/icons/search 02.png" alt="search" class="search-icon">
+                        <img src="/static/icons/Vector.png" alt="heart" class="heart-icon">
+                        <img src="/static/icons/cart.png" alt="" id="cart-btn" class="cart-icon" onclick="modals('cart-modal', 'cart-btn')">
                     <div id="cart-num">2</div>
+                    {% else %}
+                        <button type="button" id="log-in-btn" class="blue" onclick="modals('log-in-modal', 'log-in-btn')">Login</button>
+                    {% endif %}
                     </div>
-                    <button type="button" id="log-in-btn" class="blue" onclick="modals('log-in-modal', 'log-in-btn')">Login</button>
                 </div>
             </div>
             <br>

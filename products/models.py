@@ -43,6 +43,7 @@ class Product(models.Model):
     model_number = models.CharField(max_length=200, default="")
     ram_size = models.DecimalField(max_digits=200, default=0, decimal_places=2)
     operating_system = models.CharField(max_length=100, default="")
+    set_as_banner = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -58,7 +59,8 @@ class Product(models.Model):
 class Image(models.Model):
     product = models.ManyToManyField('Product', related_name='images')
     image = models.ImageField(upload_to='images/product_images/')
-    title = models.CharField(max_length=100, default="", choices=[('off-box', 'Off-box'), ('detail-box', 'Detail-box')])
+    title = models.CharField(max_length=100, default="", choices=[('off-box', 'Off-box'),
+                                                                  ('detail-box', 'Detail-box'), ('banner', 'Banner')])
 
     def __str__(self):
         products = ', '.join([product.name for product in self.product.all()])
@@ -78,4 +80,3 @@ class PriceHistory(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='price_history')
     price = models.DecimalField(max_digits=10, decimal_places=2)
     date = models.DateTimeField(auto_now_add=True)
-
