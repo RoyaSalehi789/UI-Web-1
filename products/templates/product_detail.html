@@ -1,4 +1,5 @@
 {% extends 'shared/main.html' %}
+{% load static %}
 {% load render_partial %}
 
 {% block main %}
@@ -36,15 +37,16 @@
                         <div id="purple-color" class="color-rectangle" onclick="changePriceByColor('purple-color')"></div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="group-input">
-                        <button type="button" class="button minus" id="minus" onclick="plusMinus('minus')"><img src="/static/icons/minus.png" alt="-"></button>
-                        <p class="button" id="product-counter">1</p>
-                        <button type="button" class="button plus" is="plus" onclick="plusMinus('plus')"><img src="/static/icons/plus.png" alt="+"></button>
+                <input type="hidden" id="product-id" value="{{ product.id }}">
+                    <div class="container">
+                        <div class="group-input">
+                            <button type="button" class="button minus" id="minus" onclick="plusMinus('minus')"><img src="/static/icons/minus.png" alt="-"></button>
+                            <p class="button" id="product-counter">1</p>
+                            <button type="button" class="button plus" id="plus" onclick="plusMinus('plus')"><img src="/static/icons/plus.png" alt="+"></button>
+                        </div>
+                        <button type="button" class="blue add-to-cart">Add to Cart</button>
+                        <img src="/static/icons/heart.png" alt="favorite">
                     </div>
-                    <button type="button" class="blue add-to-cart" onclick="addToCart()">Add to Cart</button>
-                    <img src="/static/icons/heart.png" alt="favorite">
-                </div>
                 <div class="share-box">
                     <p class="topic">Share</p>
                 </div>

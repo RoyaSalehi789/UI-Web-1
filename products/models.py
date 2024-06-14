@@ -44,6 +44,8 @@ class Product(models.Model):
     ram_size = models.DecimalField(max_digits=200, default=0, decimal_places=2)
     operating_system = models.CharField(max_length=100, default="")
     set_as_banner = models.BooleanField(default=False)
+    set_as_site_background = models.BooleanField(default=False)
+    slogan = models.TextField(default="")
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -60,7 +62,9 @@ class Image(models.Model):
     product = models.ManyToManyField('Product', related_name='images')
     image = models.ImageField(upload_to='images/product_images/')
     title = models.CharField(max_length=100, default="", choices=[('off-box', 'Off-box'),
-                                                                  ('detail-box', 'Detail-box'), ('banner', 'Banner')])
+                                                                  ('detail-box', 'Detail-box'),
+                                                                  ('banner', 'Banner'),
+                                                                  ('background', 'Background')])
 
     def __str__(self):
         products = ', '.join([product.name for product in self.product.all()])

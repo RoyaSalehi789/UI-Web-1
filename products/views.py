@@ -40,3 +40,14 @@ def site_banner(request):
         'product': product,
         'image': image,
     })
+
+
+def site_background(request):
+    product = Product.objects.filter(set_as_site_background=True).first()
+    image = Image.objects.filter(product=product, title='background').first()
+    print(image.image.url)
+
+    return render(request, 'site_background.html', {
+        'product': product,
+        'image': image,
+    })

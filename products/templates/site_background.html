@@ -1,0 +1,11 @@
+{% block content %}
+<div class="pic-text">
+                <div class="text-container">
+                    <p class="bold">{{ product.slogan }}</p>
+                    <p class="text">It is a long established fact that a reader will be distracted by the readable
+                        content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+                    <button class="blue"><a href="{{ product.get_absolute_url }}">Shop Now</a> <img src="/static/icons/arrow right.png" alt="" id="shop-icon"></button>
+                </div>
+                <img src="{{ image.image.url}}" alt="" id="img">
+</div>
+{% endblock %}
