@@ -129,6 +129,22 @@ function plusMinus(button) {
 
 //add-to-cart
 function addToCart() {
+  $.ajax({
+      type: 'POST',
+      url: "{% url 'add_to_cart' %}",
+      data: {
+          product_id: $('#add_cart').val(),
+          csrfmiddlewaretoken: '{{csrf_token}}',
+          action: 'post'
+      },
+
+      success: function (json){
+          console.log(json)
+      },
+      error: function (xhr, errmsg, err){
+
+      }
+  })
   var iphone = document.getElementsByClassName("price-item-cart")[0];
   var iphoneCount = parseInt(iphone.innerHTML.substring(5));
   var itemCount = parseInt(document.getElementById("product-counter").innerHTML);
